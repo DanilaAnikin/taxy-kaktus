@@ -1,0 +1,2735 @@
+{
+  "vytvoreno": "2026-10-10T08:30:09.209Z",
+  "firmy": [
+    {
+      "kaktusFirma": "0001",
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761",
+      "dic": "CZ90412761",
+      "platceDph": true,
+      "dodavatele": [
+        {
+          "kaktusId": 1,
+          "nazev": "Dřevo Šumava a.s.",
+          "ico": "90100018",
+          "dic": "CZ90100018",
+          "ulice": "Nádražní 210",
+          "mesto": "Sušice",
+          "psc": "34201",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 2,
+          "nazev": "ŽELEZÁŘSTVÍ ČÁP s.r.o.",
+          "ico": "90100026",
+          "dic": "CZ90100026",
+          "ulice": "Plzeňská 77",
+          "mesto": "Příbram",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 3,
+          "nazev": "Kování Říha, spol. s r.o.",
+          "ico": "90100034",
+          "dic": "CZ90100034",
+          "ulice": "Průmyslová 5",
+          "mesto": "Dobříš",
+          "psc": "26301",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 4,
+          "nazev": "Lakovna Žďár s.r.o.",
+          "ico": "90100042",
+          "dic": "CZ90100042",
+          "ulice": "Jihlavská 1140",
+          "mesto": "Žďár nad Sázavou",
+          "psc": "59101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 5,
+          "nazev": "Energie Brdy a.s.",
+          "ico": "90100051",
+          "dic": "CZ90100051",
+          "ulice": "Hailova 112",
+          "mesto": "Příbram",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 6,
+          "nazev": "Vodovody Příbramsko s.r.o.",
+          "ico": "90100069",
+          "dic": "CZ90100069",
+          "ulice": "Čs. armády 400",
+          "mesto": "Příbram",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 7,
+          "nazev": "Pila Ořech s.r.o.",
+          "ico": "90100077",
+          "dic": "CZ90100077",
+          "ulice": "Lesní 12",
+          "mesto": "Rožmitál pod Třemšínem",
+          "psc": "26242",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 8,
+          "nazev": "Nářadí Kuběna s.r.o.",
+          "ico": "90100085",
+          "dic": "CZ90100085",
+          "ulice": "Skladová 9",
+          "mesto": "Plzeň",
+          "psc": "30100",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 9,
+          "nazev": "Autodoprava Štěpánek",
+          "ico": "90100093",
+          "dic": null,
+          "ulice": "Milín 204",
+          "mesto": "Milín",
+          "psc": "26231",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 10,
+          "nazev": "Lepidla Újezd s.r.o.",
+          "ico": "90100107",
+          "dic": "CZ90100107",
+          "ulice": "Školní 3",
+          "mesto": "Újezd u Brna",
+          "psc": "66453",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 11,
+          "nazev": "Brusivo Čáslav s.r.o.",
+          "ico": "90100115",
+          "dic": "CZ90100115",
+          "ulice": "Chrudimská 55",
+          "mesto": "Čáslav",
+          "psc": "28601",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 12,
+          "nazev": "Telefonie Střed a.s.",
+          "ico": "90100123",
+          "dic": "CZ90100123",
+          "ulice": "Na Pankráci 30",
+          "mesto": "Praha 4",
+          "psc": "14000",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 13,
+          "nazev": "Pojišťovna Lípa a.s.",
+          "ico": "90100131",
+          "dic": "CZ90100131",
+          "ulice": "Spálená 14",
+          "mesto": "Praha 1",
+          "psc": "11000",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 14,
+          "nazev": "Úklid Šťastný s.r.o.",
+          "ico": "90100140",
+          "dic": "CZ90100140",
+          "ulice": "Žežická 8",
+          "mesto": "Příbram",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 15,
+          "nazev": "Obec Háje",
+          "ico": "00242659",
+          "dic": null,
+          "ulice": "Háje 39",
+          "mesto": "Háje",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 16,
+          "nazev": "Holz Bauer GmbH",
+          "ico": null,
+          "dic": "DE812345678",
+          "ulice": "Industriestr. 14",
+          "mesto": "Passau",
+          "psc": "94036",
+          "stat": "DE",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 17,
+          "nazev": "Kancelářské potřeby Ďáblice s.r.o.",
+          "ico": "90100174",
+          "dic": "CZ90100174",
+          "ulice": "Ďáblická 66",
+          "mesto": "Praha 8",
+          "psc": "18200",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 18,
+          "nazev": "Spojovací materiál Třešť s.r.o.",
+          "ico": "90100182",
+          "dic": "CZ90100182",
+          "ulice": "Revoluční 20",
+          "mesto": "Třešť",
+          "psc": "58901",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 19,
+          "nazev": "PILA OŘECH SRO",
+          "ico": "90100077",
+          "dic": "CZ90100077",
+          "ulice": "Lesní 12",
+          "mesto": "Rožmitál p. Tř.",
+          "psc": "26242",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 21,
+          "nazev": "Účetní kancelář Habrová s.r.o.",
+          "ico": "90100212",
+          "dic": "CZ90100212",
+          "ulice": "Pražská 18",
+          "mesto": "Příbram",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 22,
+          "nazev": "Sklenářství Křišťál s.r.o.",
+          "ico": "90100221",
+          "dic": "CZ90100221",
+          "ulice": "Plzeňská 301",
+          "mesto": "Beroun",
+          "psc": "26601",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 23,
+          "nazev": "Technické plyny Ústí s.r.o.",
+          "ico": "90100239",
+          "dic": "CZ90100239",
+          "ulice": "Přístavní 2",
+          "mesto": "Ústí nad Labem",
+          "psc": "40001",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 24,
+          "nazev": "Čalounictví Šíp",
+          "ico": "04512375",
+          "dic": null,
+          "ulice": "Tyršova 41",
+          "mesto": "Sedlčany",
+          "psc": "26401",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        }
+      ],
+      "fakturyPrijate": [
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-01720",
+          "variabilniSymbol": "202601720",
+          "dodavatel": {
+            "nazev": "ŽELEZÁŘSTVÍ ČÁP s.r.o.",
+            "ico": "90100026",
+            "dic": "CZ90100026",
+            "ulice": "Plzeňská 77",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-01-16",
+          "duzp": "2026-01-16",
+          "datumSplatnosti": "2026-01-30",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 12426.32,
+              "dph": 2609.53
+            }
+          ],
+          "celkem": 15035.85,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo - dílna",
+          "kaktus": {
+            "id": 1,
+            "doklad": "FP260001",
+            "partnerId": 2,
+            "datumUhrady": "2026-01-24",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26011829",
+          "variabilniSymbol": "26011829",
+          "dodavatel": {
+            "nazev": "Sklenářství Křišťál s.r.o.",
+            "ico": "90100221",
+            "dic": "CZ90100221",
+            "ulice": "Plzeňská 301",
+            "mesto": "Beroun",
+            "psc": "26601",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-01-21",
+          "duzp": "2026-01-21",
+          "datumSplatnosti": "2026-02-04",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 16256.8,
+              "dph": 3413.93
+            }
+          ],
+          "celkem": 19670.73,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Služby za období",
+          "kaktus": {
+            "id": 2,
+            "doklad": "FP260002",
+            "partnerId": 22,
+            "datumUhrady": "2026-02-01",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26013205",
+          "variabilniSymbol": "26013205",
+          "dodavatel": {
+            "nazev": "Čalounictví Šíp",
+            "ico": "04512375",
+            "dic": null,
+            "ulice": "Tyršova 41",
+            "mesto": "Sedlčany",
+            "psc": "26401",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-01-23",
+          "duzp": "2026-01-23",
+          "datumSplatnosti": "2026-02-06",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 11162.27,
+              "dph": 2344.08
+            }
+          ],
+          "celkem": 13506.35,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kování a doplňky",
+          "kaktus": {
+            "id": 3,
+            "doklad": "FP260003",
+            "partnerId": 24,
+            "datumUhrady": "2026-02-04",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-01513",
+          "variabilniSymbol": "202601513",
+          "dodavatel": {
+            "nazev": "Autodoprava Štěpánek",
+            "ico": "90100093",
+            "dic": null,
+            "ulice": "Milín 204",
+            "mesto": "Milín",
+            "psc": "26231",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-01-03",
+          "duzp": "2026-01-03",
+          "datumSplatnosti": "2026-01-17",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 7934.22,
+              "dph": 1666.19
+            }
+          ],
+          "celkem": 9600.41,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Spotřební materiál",
+          "kaktus": {
+            "id": 4,
+            "doklad": "FP260004",
+            "partnerId": 9,
+            "datumUhrady": "2026-01-08",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-01524",
+          "variabilniSymbol": "202601524",
+          "dodavatel": {
+            "nazev": "Účetní kancelář Habrová s.r.o.",
+            "ico": "90100212",
+            "dic": "CZ90100212",
+            "ulice": "Pražská 18",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-01-15",
+          "duzp": "2026-01-15",
+          "datumSplatnosti": "2026-01-29",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 6629.59,
+              "dph": 1392.21
+            }
+          ],
+          "celkem": 8021.8,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 5,
+            "doklad": "FP260005",
+            "partnerId": 21,
+            "datumUhrady": "2026-01-31",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26024031",
+          "variabilniSymbol": "26024031",
+          "dodavatel": {
+            "nazev": "Spojovací materiál Třešť s.r.o.",
+            "ico": "90100182",
+            "dic": "CZ90100182",
+            "ulice": "Revoluční 20",
+            "mesto": "Třešť",
+            "psc": "58901",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-02-24",
+          "duzp": "2026-02-24",
+          "datumSplatnosti": "2026-03-10",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 22308.66,
+              "dph": 4684.82
+            }
+          ],
+          "celkem": 26993.48,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Služby za období",
+          "kaktus": {
+            "id": 6,
+            "doklad": "FP260006",
+            "partnerId": 18,
+            "datumUhrady": "2026-03-12",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26319106",
+          "variabilniSymbol": "26319106",
+          "dodavatel": {
+            "nazev": "Čalounictví Šíp",
+            "ico": "04512375",
+            "dic": null,
+            "ulice": "Tyršova 41",
+            "mesto": "Sedlčany",
+            "psc": "26401",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-02-09",
+          "duzp": "2026-02-09",
+          "datumSplatnosti": "2026-02-23",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 2097.84,
+              "dph": 440.55
+            }
+          ],
+          "celkem": 2538.39,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 7,
+            "doklad": "FP260007",
+            "partnerId": 24,
+            "datumUhrady": "2026-02-18",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-02947",
+          "variabilniSymbol": "202602947",
+          "dodavatel": {
+            "nazev": "Obec Háje",
+            "ico": "00242659",
+            "dic": null,
+            "ulice": "Háje 39",
+            "mesto": "Háje",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-02-18",
+          "duzp": "2026-02-18",
+          "datumSplatnosti": "2026-03-04",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 17297.39,
+              "dph": 3632.45
+            }
+          ],
+          "celkem": 20929.84,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Služby za období",
+          "kaktus": {
+            "id": 8,
+            "doklad": "FP260008",
+            "partnerId": 15,
+            "datumUhrady": "2026-03-02",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26022125",
+          "variabilniSymbol": "26022125",
+          "dodavatel": {
+            "nazev": "Účetní kancelář Habrová s.r.o.",
+            "ico": "90100212",
+            "dic": "CZ90100212",
+            "ulice": "Pražská 18",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-02-23",
+          "duzp": "2026-02-23",
+          "datumSplatnosti": "2026-03-09",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 6534.33,
+              "dph": 1372.21
+            }
+          ],
+          "celkem": 7906.54,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 9,
+            "doklad": "FP260009",
+            "partnerId": 21,
+            "datumUhrady": "2026-03-03",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26030385",
+          "variabilniSymbol": "26030385",
+          "dodavatel": {
+            "nazev": "Obec Háje",
+            "ico": "00242659",
+            "dic": null,
+            "ulice": "Háje 39",
+            "mesto": "Háje",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-03-02",
+          "duzp": "2026-03-02",
+          "datumSplatnosti": "2026-03-16",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 23766.23,
+              "dph": 4990.91
+            }
+          ],
+          "celkem": 28757.14,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Režijní náklady",
+          "kaktus": {
+            "id": 10,
+            "doklad": "FP260010",
+            "partnerId": 15,
+            "datumUhrady": "2026-03-13",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26031799",
+          "variabilniSymbol": "26031799",
+          "dodavatel": {
+            "nazev": "Lakovna Žďár s.r.o.",
+            "ico": "90100042",
+            "dic": "CZ90100042",
+            "ulice": "Jihlavská 1140",
+            "mesto": "Žďár nad Sázavou",
+            "psc": "59101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-03-27",
+          "duzp": "2026-03-27",
+          "datumSplatnosti": "2026-04-10",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 22645.56,
+              "dph": 4755.57
+            }
+          ],
+          "celkem": 27401.13,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kování a doplňky",
+          "kaktus": {
+            "id": 11,
+            "doklad": "FP260011",
+            "partnerId": 4,
+            "datumUhrady": "2026-04-04",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26035363",
+          "variabilniSymbol": "26035363",
+          "dodavatel": {
+            "nazev": "Kování Říha, spol. s r.o.",
+            "ico": "90100034",
+            "dic": "CZ90100034",
+            "ulice": "Průmyslová 5",
+            "mesto": "Dobříš",
+            "psc": "26301",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-03-04",
+          "duzp": "2026-03-04",
+          "datumSplatnosti": "2026-03-18",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 6041.44,
+              "dph": 1268.7
+            }
+          ],
+          "celkem": 7310.14,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Opravy a údržba",
+          "kaktus": {
+            "id": 12,
+            "doklad": "FP260012",
+            "partnerId": 3,
+            "datumUhrady": "2026-03-15",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "260310",
+          "variabilniSymbol": "260310",
+          "dodavatel": {
+            "nazev": "Dřevo Šumava a.s.",
+            "ico": "90100018",
+            "dic": "CZ90100018",
+            "ulice": "Nádražní 210",
+            "mesto": "Sušice",
+            "psc": "34201",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-03-31",
+          "duzp": "2026-03-31",
+          "datumSplatnosti": "2026-04-14",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 18452.37,
+              "dph": 3875
+            }
+          ],
+          "celkem": 22327.37,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo dub 52 mm",
+          "kaktus": {
+            "id": 13,
+            "doklad": "FP260013",
+            "partnerId": 1,
+            "datumUhrady": "2026-04-10",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26215212",
+          "variabilniSymbol": "26215212",
+          "dodavatel": {
+            "nazev": "Nářadí Kuběna s.r.o.",
+            "ico": "90100085",
+            "dic": "CZ90100085",
+            "ulice": "Skladová 9",
+            "mesto": "Plzeň",
+            "psc": "30100",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-03-27",
+          "duzp": "2026-03-27",
+          "datumSplatnosti": "2026-04-10",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 18665.01,
+              "dph": 3919.65
+            }
+          ],
+          "celkem": 22584.66,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Doprava materiálu",
+          "kaktus": {
+            "id": 14,
+            "doklad": "FP260014",
+            "partnerId": 8,
+            "datumUhrady": "2026-04-08",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26759313",
+          "variabilniSymbol": "26759313",
+          "dodavatel": {
+            "nazev": "Energie Brdy a.s.",
+            "ico": "90100051",
+            "dic": "CZ90100051",
+            "ulice": "Hailova 112",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-03-20",
+          "duzp": "2026-03-20",
+          "datumSplatnosti": "2026-04-03",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 15818.27,
+              "dph": 3321.84
+            }
+          ],
+          "celkem": 19140.11,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Doprava materiálu",
+          "kaktus": {
+            "id": 15,
+            "doklad": "FP260015",
+            "partnerId": 5,
+            "datumUhrady": "2026-03-28",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-047814",
+          "variabilniSymbol": "2026047814",
+          "dodavatel": {
+            "nazev": "Autodoprava Štěpánek",
+            "ico": "90100093",
+            "dic": null,
+            "ulice": "Milín 204",
+            "mesto": "Milín",
+            "psc": "26231",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-04-10",
+          "duzp": "2026-04-10",
+          "datumSplatnosti": "2026-04-24",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 4443.79,
+              "dph": 933.2
+            }
+          ],
+          "celkem": 5376.99,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo - dílna",
+          "kaktus": {
+            "id": 16,
+            "doklad": "FP260016",
+            "partnerId": 9,
+            "datumUhrady": "2026-04-21",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "4645/2026",
+          "variabilniSymbol": "46452026",
+          "dodavatel": {
+            "nazev": "Lepidla Újezd s.r.o.",
+            "ico": "90100107",
+            "dic": "CZ90100107",
+            "ulice": "Školní 3",
+            "mesto": "Újezd u Brna",
+            "psc": "66453",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-04-10",
+          "duzp": "2026-04-10",
+          "datumSplatnosti": "2026-04-24",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 11964.04,
+              "dph": 2512.45
+            }
+          ],
+          "celkem": 14476.49,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 17,
+            "doklad": "FP260017",
+            "partnerId": 10,
+            "datumUhrady": "2026-04-16",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "1015/2026",
+          "variabilniSymbol": "10152026",
+          "dodavatel": {
+            "nazev": "Energie Brdy a.s.",
+            "ico": "90100051",
+            "dic": "CZ90100051",
+            "ulice": "Hailova 112",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-04-14",
+          "duzp": "2026-04-14",
+          "datumSplatnosti": "2026-04-28",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 9841,
+              "dph": 2066.61
+            }
+          ],
+          "celkem": 11907.61,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Režijní náklady",
+          "kaktus": {
+            "id": 18,
+            "doklad": "FP260018",
+            "partnerId": 5,
+            "datumUhrady": "2026-04-25",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26143117",
+          "variabilniSymbol": "26143117",
+          "dodavatel": {
+            "nazev": "Obec Háje",
+            "ico": "00242659",
+            "dic": null,
+            "ulice": "Háje 39",
+            "mesto": "Háje",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-04-21",
+          "duzp": "2026-04-21",
+          "datumSplatnosti": "2026-05-05",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 10045.77,
+              "dph": 2109.61
+            }
+          ],
+          "celkem": 12155.38,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo - dílna",
+          "kaktus": {
+            "id": 19,
+            "doklad": "FP260019",
+            "partnerId": 15,
+            "datumUhrady": "2026-04-29",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-057118",
+          "variabilniSymbol": "2026057118",
+          "dodavatel": {
+            "nazev": "Vodovody Příbramsko s.r.o.",
+            "ico": "90100069",
+            "dic": "CZ90100069",
+            "ulice": "Čs. armády 400",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-05-13",
+          "duzp": "2026-05-13",
+          "datumSplatnosti": "2026-05-27",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 11006.67,
+              "dph": 2311.4
+            }
+          ],
+          "celkem": 13318.07,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Zálohová platba",
+          "kaktus": {
+            "id": 21,
+            "doklad": "FP260021",
+            "partnerId": 6,
+            "datumUhrady": "2026-05-19",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "6079/2026",
+          "variabilniSymbol": "60792026",
+          "dodavatel": {
+            "nazev": "Technické plyny Ústí s.r.o.",
+            "ico": "90100239",
+            "dic": "CZ90100239",
+            "ulice": "Přístavní 2",
+            "mesto": "Ústí nad Labem",
+            "psc": "40001",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-05-06",
+          "duzp": "2026-05-06",
+          "datumSplatnosti": "2026-05-20",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 19649.45,
+              "dph": 4126.38
+            }
+          ],
+          "celkem": 23775.83,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Zálohová platba",
+          "kaktus": {
+            "id": 22,
+            "doklad": "FP260022",
+            "partnerId": 23,
+            "datumUhrady": "2026-05-21",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26440320",
+          "variabilniSymbol": "26440320",
+          "dodavatel": {
+            "nazev": "Autodoprava Štěpánek",
+            "ico": "90100093",
+            "dic": null,
+            "ulice": "Milín 204",
+            "mesto": "Milín",
+            "psc": "26231",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-05-17",
+          "duzp": "2026-05-17",
+          "datumSplatnosti": "2026-05-31",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 16468,
+              "dph": 3458.28
+            },
+            {
+              "sazba": 12,
+              "zaklad": 1693.48,
+              "dph": 203.22
+            }
+          ],
+          "celkem": 21822.98,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Doprava materiálu",
+          "kaktus": {
+            "id": 23,
+            "doklad": "FP260023",
+            "partnerId": 9,
+            "datumUhrady": "2026-05-30",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26088121",
+          "variabilniSymbol": "26088121",
+          "dodavatel": {
+            "nazev": "Obec Háje",
+            "ico": "00242659",
+            "dic": null,
+            "ulice": "Háje 39",
+            "mesto": "Háje",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-05-24",
+          "duzp": "2026-05-24",
+          "datumSplatnosti": "2026-06-07",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 4254.49,
+              "dph": 893.44
+            },
+            {
+              "sazba": 0,
+              "zaklad": 50.6,
+              "dph": 0
+            }
+          ],
+          "celkem": 5198.53,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Služby za období",
+          "kaktus": {
+            "id": 24,
+            "doklad": "FP260024",
+            "partnerId": 15,
+            "datumUhrady": "2026-06-09",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "1552/2026",
+          "variabilniSymbol": "15522026",
+          "dodavatel": {
+            "nazev": "Energie Brdy a.s.",
+            "ico": "90100051",
+            "dic": "CZ90100051",
+            "ulice": "Hailova 112",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-05-08",
+          "duzp": "2026-05-08",
+          "datumSplatnosti": "2026-05-22",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 12246.28,
+              "dph": 2571.72
+            },
+            {
+              "sazba": 0,
+              "zaklad": 717.13,
+              "dph": 0
+            }
+          ],
+          "celkem": 15535.13,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Zálohová platba",
+          "kaktus": {
+            "id": 25,
+            "doklad": "FP260025",
+            "partnerId": 5,
+            "datumUhrady": "2026-05-18",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26066187",
+          "variabilniSymbol": "26066187",
+          "dodavatel": {
+            "nazev": "Úklid Šťastný s.r.o.",
+            "ico": "90100140",
+            "dic": "CZ90100140",
+            "ulice": "Žežická 8",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-06-24",
+          "duzp": "2026-06-24",
+          "datumSplatnosti": "2026-07-08",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 16459.33,
+              "dph": 3456.46
+            }
+          ],
+          "celkem": 19915.79,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 26,
+            "doklad": "FP260026",
+            "partnerId": 14,
+            "datumUhrady": "2026-07-05",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26065820",
+          "variabilniSymbol": "26065820",
+          "dodavatel": {
+            "nazev": "Lakovna Žďár s.r.o.",
+            "ico": "90100042",
+            "dic": "CZ90100042",
+            "ulice": "Jihlavská 1140",
+            "mesto": "Žďár nad Sázavou",
+            "psc": "59101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-06-13",
+          "duzp": "2026-06-13",
+          "datumSplatnosti": "2026-06-27",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 20076.55,
+              "dph": 4216.08
+            }
+          ],
+          "celkem": 24292.63,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Spotřební materiál",
+          "kaktus": {
+            "id": 27,
+            "doklad": "FP260027",
+            "partnerId": 4,
+            "datumUhrady": "2026-06-23",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "RE-2026-3102",
+          "variabilniSymbol": "20263102",
+          "dodavatel": {
+            "nazev": "Holz Bauer GmbH",
+            "ico": null,
+            "dic": "DE812345678",
+            "ulice": "Industriestr. 14",
+            "mesto": "Passau",
+            "psc": "94036",
+            "stat": "DE"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-06-18",
+          "duzp": "2026-06-18",
+          "datumSplatnosti": "2026-07-02",
+          "rozpisDph": [
+            {
+              "sazba": 0,
+              "zaklad": 1840.5,
+              "dph": 0
+            }
+          ],
+          "celkem": 1840.5,
+          "mena": "EUR",
+          "kurz": 24.78,
+          "popis": "Eichenfurnier",
+          "kaktus": {
+            "id": 28,
+            "doklad": "FP260028",
+            "partnerId": 16,
+            "datumUhrady": "2026-06-30",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "6274/2026",
+          "variabilniSymbol": "62742026",
+          "dodavatel": {
+            "nazev": "Pila Ořech s.r.o.",
+            "ico": "90100077",
+            "dic": "CZ90100077",
+            "ulice": "Lesní 12",
+            "mesto": "Rožmitál pod Třemšínem",
+            "psc": "26242",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-06-10",
+          "duzp": "2026-06-10",
+          "datumSplatnosti": "2026-06-24",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 21561.17,
+              "dph": 4527.85
+            }
+          ],
+          "celkem": 26089.02,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Opravy a údržba",
+          "kaktus": {
+            "id": 29,
+            "doklad": "FP260029",
+            "partnerId": 7,
+            "datumUhrady": "2026-06-22",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26254626",
+          "variabilniSymbol": "26254626",
+          "dodavatel": {
+            "nazev": "Pojišťovna Lípa a.s.",
+            "ico": "90100131",
+            "dic": "CZ90100131",
+            "ulice": "Spálená 14",
+            "mesto": "Praha 1",
+            "psc": "11000",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-06-18",
+          "duzp": "2026-06-18",
+          "datumSplatnosti": "2026-07-02",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 5506.43,
+              "dph": 1156.35
+            }
+          ],
+          "celkem": 6662.78,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Režijní náklady",
+          "kaktus": {
+            "id": 30,
+            "doklad": "FP260030",
+            "partnerId": 13,
+            "datumUhrady": "2026-07-04",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-077027",
+          "variabilniSymbol": "2026077027",
+          "dodavatel": {
+            "nazev": "Čalounictví Šíp",
+            "ico": "04512375",
+            "dic": null,
+            "ulice": "Tyršova 41",
+            "mesto": "Sedlčany",
+            "psc": "26401",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-07-05",
+          "duzp": "2026-07-05",
+          "datumSplatnosti": "2026-07-19",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 14352.25,
+              "dph": 3013.97
+            }
+          ],
+          "celkem": 17366.22,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Opravy a údržba",
+          "kaktus": {
+            "id": 31,
+            "doklad": "FP260031",
+            "partnerId": 24,
+            "datumUhrady": "2026-07-14",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-075128",
+          "variabilniSymbol": "2026075128",
+          "dodavatel": {
+            "nazev": "Brusivo Čáslav s.r.o.",
+            "ico": "90100115",
+            "dic": "CZ90100115",
+            "ulice": "Chrudimská 55",
+            "mesto": "Čáslav",
+            "psc": "28601",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-07-17",
+          "duzp": "2026-07-17",
+          "datumSplatnosti": "2026-07-31",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 11794.81,
+              "dph": 2476.91
+            }
+          ],
+          "celkem": 14271.72,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Spotřební materiál",
+          "kaktus": {
+            "id": 32,
+            "doklad": "FP260032",
+            "partnerId": 11,
+            "datumUhrady": "2026-07-24",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26074055",
+          "variabilniSymbol": "26074055",
+          "dodavatel": {
+            "nazev": "Nářadí Kuběna s.r.o.",
+            "ico": "90100085",
+            "dic": "CZ90100085",
+            "ulice": "Skladová 9",
+            "mesto": "Plzeň",
+            "psc": "30100",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-07-04",
+          "duzp": "2026-07-04",
+          "datumSplatnosti": "2026-07-18",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 14893.26,
+              "dph": 3127.58
+            }
+          ],
+          "celkem": 18020.84,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Materiál dle objednávky",
+          "kaktus": {
+            "id": 33,
+            "doklad": "FP260033",
+            "partnerId": 8,
+            "datumUhrady": "2026-07-17",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-072430",
+          "variabilniSymbol": "2026072430",
+          "dodavatel": {
+            "nazev": "Vodovody Příbramsko s.r.o.",
+            "ico": "90100069",
+            "dic": "CZ90100069",
+            "ulice": "Čs. armády 400",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-07-27",
+          "duzp": "2026-07-27",
+          "datumSplatnosti": "2026-08-10",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 8296.28,
+              "dph": 1742.22
+            },
+            {
+              "sazba": 0,
+              "zaklad": 399.83,
+              "dph": 0
+            }
+          ],
+          "celkem": 10438.33,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Materiál dle objednávky",
+          "kaktus": {
+            "id": 34,
+            "doklad": "FP260034",
+            "partnerId": 6,
+            "datumUhrady": "2026-08-02",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-079531",
+          "variabilniSymbol": "2026079531",
+          "dodavatel": {
+            "nazev": "Nářadí Kuběna s.r.o.",
+            "ico": "90100085",
+            "dic": "CZ90100085",
+            "ulice": "Skladová 9",
+            "mesto": "Plzeň",
+            "psc": "30100",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-07-09",
+          "duzp": "2026-07-09",
+          "datumSplatnosti": "2026-07-23",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 20925.83,
+              "dph": 4394.42
+            }
+          ],
+          "celkem": 25320.25,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Spotřební materiál",
+          "kaktus": {
+            "id": 35,
+            "doklad": "FP260035",
+            "partnerId": 8,
+            "datumUhrady": "2026-07-19",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-089032",
+          "variabilniSymbol": "2026089032",
+          "dodavatel": {
+            "nazev": "Dřevo Šumava a.s.",
+            "ico": "90100018",
+            "dic": "CZ90100018",
+            "ulice": "Nádražní 210",
+            "mesto": "Sušice",
+            "psc": "34201",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-08-04",
+          "duzp": "2026-08-04",
+          "datumSplatnosti": "2026-08-18",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 19303.13,
+              "dph": 4053.66
+            }
+          ],
+          "celkem": 23356.79,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo - dílna",
+          "kaktus": {
+            "id": 36,
+            "doklad": "FP260036",
+            "partnerId": 1,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "5599/2026",
+          "variabilniSymbol": "55992026",
+          "dodavatel": {
+            "nazev": "Pojišťovna Lípa a.s.",
+            "ico": "90100131",
+            "dic": "CZ90100131",
+            "ulice": "Spálená 14",
+            "mesto": "Praha 1",
+            "psc": "11000",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-08-06",
+          "duzp": "2026-08-06",
+          "datumSplatnosti": "2026-08-20",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 16604.59,
+              "dph": 3486.96
+            },
+            {
+              "sazba": 0,
+              "zaklad": 746.11,
+              "dph": 0
+            }
+          ],
+          "celkem": 20837.66,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 37,
+            "doklad": "FP260037",
+            "partnerId": 13,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26839234",
+          "variabilniSymbol": "26839234",
+          "dodavatel": {
+            "nazev": "Kování Říha, spol. s r.o.",
+            "ico": "90100034",
+            "dic": "CZ90100034",
+            "ulice": "Průmyslová 5",
+            "mesto": "Dobříš",
+            "psc": "26301",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-08-14",
+          "duzp": "2026-08-14",
+          "datumSplatnosti": "2026-08-28",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 19271.01,
+              "dph": 4046.91
+            }
+          ],
+          "celkem": 23317.92,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo - dílna",
+          "kaktus": {
+            "id": 38,
+            "doklad": "FP260038",
+            "partnerId": 3,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-084435",
+          "variabilniSymbol": "2026084435",
+          "dodavatel": {
+            "nazev": "Brusivo Čáslav s.r.o.",
+            "ico": "90100115",
+            "dic": "CZ90100115",
+            "ulice": "Chrudimská 55",
+            "mesto": "Čáslav",
+            "psc": "28601",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-08-12",
+          "duzp": "2026-08-12",
+          "datumSplatnosti": "2026-08-26",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 828.97,
+              "dph": 174.08
+            }
+          ],
+          "celkem": 1003.05,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kování a doplňky",
+          "kaktus": {
+            "id": 40,
+            "doklad": "FP260040",
+            "partnerId": 11,
+            "datumUhrady": "2026-08-23",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "529/2026",
+          "variabilniSymbol": "5292026",
+          "dodavatel": {
+            "nazev": "Kancelářské potřeby Ďáblice s.r.o.",
+            "ico": "90100174",
+            "dic": "CZ90100174",
+            "ulice": "Ďáblická 66",
+            "mesto": "Praha 8",
+            "psc": "18200",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-09-24",
+          "duzp": "2026-09-24",
+          "datumSplatnosti": "2026-10-08",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 14523.97,
+              "dph": 3050.03
+            }
+          ],
+          "celkem": 17574,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Zálohová platba",
+          "kaktus": {
+            "id": 41,
+            "doklad": "FP260041",
+            "partnerId": 17,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "NAJ-2026-09",
+          "variabilniSymbol": "2026009",
+          "dodavatel": {
+            "nazev": "Obec Háje",
+            "ico": "00242659",
+            "dic": null,
+            "ulice": "Háje 39",
+            "mesto": "Háje",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-09-01",
+          "duzp": "2026-09-01",
+          "datumSplatnosti": "2026-09-15",
+          "rozpisDph": [
+            {
+              "sazba": 0,
+              "zaklad": 12500,
+              "dph": 0
+            }
+          ],
+          "celkem": 12500,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Nájem dílny 09/2026",
+          "kaktus": {
+            "id": 42,
+            "doklad": "FP260042",
+            "partnerId": 15,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "6472/2026",
+          "variabilniSymbol": "64722026",
+          "dodavatel": {
+            "nazev": "Telefonie Střed a.s.",
+            "ico": "90100123",
+            "dic": "CZ90100123",
+            "ulice": "Na Pankráci 30",
+            "mesto": "Praha 4",
+            "psc": "14000",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-09-05",
+          "duzp": "2026-09-05",
+          "datumSplatnosti": "2026-09-19",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 18871.47,
+              "dph": 3963.01
+            }
+          ],
+          "celkem": 22834.48,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo - dílna",
+          "kaktus": {
+            "id": 43,
+            "doklad": "FP260043",
+            "partnerId": 12,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26237138",
+          "variabilniSymbol": "26237138",
+          "dodavatel": {
+            "nazev": "Spojovací materiál Třešť s.r.o.",
+            "ico": "90100182",
+            "dic": "CZ90100182",
+            "ulice": "Revoluční 20",
+            "mesto": "Třešť",
+            "psc": "58901",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-09-16",
+          "duzp": "2026-09-16",
+          "datumSplatnosti": "2026-09-30",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 7351.36,
+              "dph": 1543.79
+            }
+          ],
+          "celkem": 8895.15,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 44,
+            "doklad": "FP260044",
+            "partnerId": 18,
+            "datumUhrady": "2026-09-22",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-0931",
+          "variabilniSymbol": "20260931",
+          "dodavatel": {
+            "nazev": "ŽELEZÁŘSTVÍ ČÁP s.r.o.",
+            "ico": "90100026",
+            "dic": "CZ90100026",
+            "ulice": "Plzeňská 77",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-09-22",
+          "duzp": "2026-09-22",
+          "datumSplatnosti": "2026-10-06",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 3264.46,
+              "dph": 685.54
+            }
+          ],
+          "celkem": 3950,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Spojovací materiál",
+          "kaktus": {
+            "id": 45,
+            "doklad": "FP260045",
+            "partnerId": 2,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26742239",
+          "variabilniSymbol": "26742239",
+          "dodavatel": {
+            "nazev": "Vodovody Příbramsko s.r.o.",
+            "ico": "90100069",
+            "dic": "CZ90100069",
+            "ulice": "Čs. armády 400",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Truhlářství Dvořák s.r.o.",
+            "ico": "90412761"
+          },
+          "datumVystaveni": "2026-09-26",
+          "duzp": "2026-09-26",
+          "datumSplatnosti": "2026-10-10",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 22288.53,
+              "dph": 4680.59
+            }
+          ],
+          "celkem": 26969.12,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Materiál dle objednávky",
+          "kaktus": {
+            "id": 46,
+            "doklad": "FP260046",
+            "partnerId": 6,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        }
+      ],
+      "varovani": [
+        {
+          "kod": "DUPLICATE_SUPPLIER_ICO",
+          "zprava": "Partners 7, 19 share IČO 90100077"
+        }
+      ]
+    },
+    {
+      "kaktusFirma": "0002",
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130",
+      "dic": "CZ90581130",
+      "platceDph": true,
+      "dodavatele": [
+        {
+          "kaktusId": 1,
+          "nazev": "Mlýn Perner a.s.",
+          "ico": "90200012",
+          "dic": "CZ90200012",
+          "ulice": "Mlýnská 1",
+          "mesto": "Svijany",
+          "psc": "46346",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 2,
+          "nazev": "Droždí Kolín s.r.o.",
+          "ico": "90200021",
+          "dic": "CZ90200021",
+          "ulice": "Havlíčkova 260",
+          "mesto": "Kolín",
+          "psc": "28002",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 3,
+          "nazev": "Mlékárna Olešná a.s.",
+          "ico": "90200039",
+          "dic": "CZ90200039",
+          "ulice": "Olešná 15",
+          "mesto": "Olešná",
+          "psc": "26901",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 4,
+          "nazev": "Obaly Šafář s.r.o.",
+          "ico": "90200047",
+          "dic": "CZ90200047",
+          "ulice": "Tovární 8",
+          "mesto": "Hořovice",
+          "psc": "26801",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 5,
+          "nazev": "Energie Brdy a.s.",
+          "ico": "90100051",
+          "dic": "CZ90100051",
+          "ulice": "Hailova 112",
+          "mesto": "Příbram",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 6,
+          "nazev": "Účetní kancelář Habrová s.r.o.",
+          "ico": "90100212",
+          "dic": "CZ90100212",
+          "ulice": "Pražská 18",
+          "mesto": "Příbram",
+          "psc": "26101",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 7,
+          "nazev": "Servis pecí Žák",
+          "ico": "90200071",
+          "dic": null,
+          "ulice": "Zahradní 5",
+          "mesto": "Zdice",
+          "psc": "26751",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 8,
+          "nazev": "Vejce Líšno s.r.o.",
+          "ico": "90200080",
+          "dic": "CZ90200080",
+          "ulice": "Líšno 2",
+          "mesto": "Bystřice",
+          "psc": "25751",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        },
+        {
+          "kaktusId": 9,
+          "nazev": "Sůl a koření Čech s.r.o.",
+          "ico": "90200098",
+          "dic": "CZ90200098",
+          "ulice": "Slaná 11",
+          "mesto": "Beroun",
+          "psc": "26601",
+          "stat": "CZ",
+          "ucet": null,
+          "poznamka": null
+        }
+      ],
+      "fakturyPrijate": [
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "758/2026",
+          "variabilniSymbol": "7582026",
+          "dodavatel": {
+            "nazev": "Účetní kancelář Habrová s.r.o.",
+            "ico": "90100212",
+            "dic": "CZ90100212",
+            "ulice": "Pražská 18",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-01-07",
+          "duzp": "2026-01-07",
+          "datumSplatnosti": "2026-01-21",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 11170.33,
+              "dph": 2345.77
+            }
+          ],
+          "celkem": 13516.1,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Materiál dle objednávky",
+          "kaktus": {
+            "id": 1,
+            "doklad": "FP260001",
+            "partnerId": 6,
+            "datumUhrady": "2026-01-16",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26197301",
+          "variabilniSymbol": "26197301",
+          "dodavatel": {
+            "nazev": "Účetní kancelář Habrová s.r.o.",
+            "ico": "90100212",
+            "dic": "CZ90100212",
+            "ulice": "Pražská 18",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-01-03",
+          "duzp": "2026-01-03",
+          "datumSplatnosti": "2026-01-17",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 2115.2,
+              "dph": 444.19
+            }
+          ],
+          "celkem": 2559.39,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Opravy a údržba",
+          "kaktus": {
+            "id": 2,
+            "doklad": "FP260002",
+            "partnerId": 6,
+            "datumUhrady": "2026-01-12",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-02682",
+          "variabilniSymbol": "202602682",
+          "dodavatel": {
+            "nazev": "Mlékárna Olešná a.s.",
+            "ico": "90200039",
+            "dic": "CZ90200039",
+            "ulice": "Olešná 15",
+            "mesto": "Olešná",
+            "psc": "26901",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-02-08",
+          "duzp": "2026-02-08",
+          "datumSplatnosti": "2026-02-22",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 16655.8,
+              "dph": 3497.72
+            }
+          ],
+          "celkem": 20153.52,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Doprava materiálu",
+          "kaktus": {
+            "id": 3,
+            "doklad": "FP260003",
+            "partnerId": 3,
+            "datumUhrady": "2026-02-13",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26030503",
+          "variabilniSymbol": "26030503",
+          "dodavatel": {
+            "nazev": "Servis pecí Žák",
+            "ico": "90200071",
+            "dic": null,
+            "ulice": "Zahradní 5",
+            "mesto": "Zdice",
+            "psc": "26751",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-03-17",
+          "duzp": "2026-03-17",
+          "datumSplatnosti": "2026-03-31",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 7339.43,
+              "dph": 1541.28
+            }
+          ],
+          "celkem": 8880.71,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Opravy a údržba",
+          "kaktus": {
+            "id": 4,
+            "doklad": "FP260004",
+            "partnerId": 7,
+            "datumUhrady": "2026-03-26",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "7267/2026",
+          "variabilniSymbol": "72672026",
+          "dodavatel": {
+            "nazev": "Obaly Šafář s.r.o.",
+            "ico": "90200047",
+            "dic": "CZ90200047",
+            "ulice": "Tovární 8",
+            "mesto": "Hořovice",
+            "psc": "26801",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-03-26",
+          "duzp": "2026-03-26",
+          "datumSplatnosti": "2026-04-09",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 8221.27,
+              "dph": 1726.47
+            },
+            {
+              "sazba": 12,
+              "zaklad": 2227.43,
+              "dph": 267.29
+            },
+            {
+              "sazba": 0,
+              "zaklad": 750.75,
+              "dph": 0
+            }
+          ],
+          "celkem": 13193.21,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 5,
+            "doklad": "FP260005",
+            "partnerId": 4,
+            "datumUhrady": "2026-03-31",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-04155",
+          "variabilniSymbol": "202604155",
+          "dodavatel": {
+            "nazev": "Mlékárna Olešná a.s.",
+            "ico": "90200039",
+            "dic": "CZ90200039",
+            "ulice": "Olešná 15",
+            "mesto": "Olešná",
+            "psc": "26901",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-04-21",
+          "duzp": "2026-04-21",
+          "datumSplatnosti": "2026-05-05",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 23588.43,
+              "dph": 4953.57
+            }
+          ],
+          "celkem": 28542,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Kancelářské potřeby",
+          "kaktus": {
+            "id": 6,
+            "doklad": "FP260006",
+            "partnerId": 3,
+            "datumUhrady": "2026-04-29",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2231/2026",
+          "variabilniSymbol": "22312026",
+          "dodavatel": {
+            "nazev": "Vejce Líšno s.r.o.",
+            "ico": "90200080",
+            "dic": "CZ90200080",
+            "ulice": "Líšno 2",
+            "mesto": "Bystřice",
+            "psc": "25751",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-05-09",
+          "duzp": "2026-05-09",
+          "datumSplatnosti": "2026-05-23",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 12310.92,
+              "dph": 2585.29
+            },
+            {
+              "sazba": 12,
+              "zaklad": 143.24,
+              "dph": 17.19
+            }
+          ],
+          "celkem": 15056.64,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Režijní náklady",
+          "kaktus": {
+            "id": 7,
+            "doklad": "FP260007",
+            "partnerId": 8,
+            "datumUhrady": "2026-05-22",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26055008",
+          "variabilniSymbol": "26055008",
+          "dodavatel": {
+            "nazev": "Účetní kancelář Habrová s.r.o.",
+            "ico": "90100212",
+            "dic": "CZ90100212",
+            "ulice": "Pražská 18",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-05-17",
+          "duzp": "2026-05-17",
+          "datumSplatnosti": "2026-05-31",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 10925.67,
+              "dph": 2294.39
+            }
+          ],
+          "celkem": 13220.06,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Režijní náklady",
+          "kaktus": {
+            "id": 8,
+            "doklad": "FP260008",
+            "partnerId": 6,
+            "datumUhrady": "2026-05-26",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "7501/2026",
+          "variabilniSymbol": "75012026",
+          "dodavatel": {
+            "nazev": "Sůl a koření Čech s.r.o.",
+            "ico": "90200098",
+            "dic": "CZ90200098",
+            "ulice": "Slaná 11",
+            "mesto": "Beroun",
+            "psc": "26601",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-06-11",
+          "duzp": "2026-06-11",
+          "datumSplatnosti": "2026-06-25",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 21493.93,
+              "dph": 4513.73
+            }
+          ],
+          "celkem": 26007.66,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Materiál dle objednávky",
+          "kaktus": {
+            "id": 9,
+            "doklad": "FP260009",
+            "partnerId": 9,
+            "datumUhrady": "2026-06-22",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "26076504",
+          "variabilniSymbol": "26076504",
+          "dodavatel": {
+            "nazev": "Mlékárna Olešná a.s.",
+            "ico": "90200039",
+            "dic": "CZ90200039",
+            "ulice": "Olešná 15",
+            "mesto": "Olešná",
+            "psc": "26901",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-07-26",
+          "duzp": "2026-07-26",
+          "datumSplatnosti": "2026-08-09",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 10701.86,
+              "dph": 2247.39
+            },
+            {
+              "sazba": 0,
+              "zaklad": 387.42,
+              "dph": 0
+            }
+          ],
+          "celkem": 13336.67,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Materiál dle objednávky",
+          "kaktus": {
+            "id": 10,
+            "doklad": "FP260010",
+            "partnerId": 3,
+            "datumUhrady": "2026-08-11",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "2026-071810",
+          "variabilniSymbol": "2026071810",
+          "dodavatel": {
+            "nazev": "Servis pecí Žák",
+            "ico": "90200071",
+            "dic": null,
+            "ulice": "Zahradní 5",
+            "mesto": "Zdice",
+            "psc": "26751",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-07-05",
+          "duzp": "2026-07-05",
+          "datumSplatnosti": "2026-07-19",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 24221.1,
+              "dph": 5086.43
+            }
+          ],
+          "celkem": 29307.53,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Doprava materiálu",
+          "kaktus": {
+            "id": 11,
+            "doklad": "FP260011",
+            "partnerId": 7,
+            "datumUhrady": "2026-07-13",
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV-2609-0188",
+          "variabilniSymbol": "26090188",
+          "dodavatel": {
+            "nazev": "Mlýn Perner a.s.",
+            "ico": "90200012",
+            "dic": "CZ90200012",
+            "ulice": "Mlýnská 1",
+            "mesto": "Svijany",
+            "psc": "46346",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-09-25",
+          "duzp": "2026-09-25",
+          "datumSplatnosti": "2026-10-09",
+          "rozpisDph": [
+            {
+              "sazba": 12,
+              "zaklad": 31200,
+              "dph": 3744
+            }
+          ],
+          "celkem": 34944,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Mouka pšeničná hladká",
+          "kaktus": {
+            "id": 12,
+            "doklad": "FP260012",
+            "partnerId": 1,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "FV26433311",
+          "variabilniSymbol": "26433311",
+          "dodavatel": {
+            "nazev": "Energie Brdy a.s.",
+            "ico": "90100051",
+            "dic": "CZ90100051",
+            "ulice": "Hailova 112",
+            "mesto": "Příbram",
+            "psc": "26101",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-08-22",
+          "duzp": "2026-08-22",
+          "datumSplatnosti": "2026-09-05",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 17514.43,
+              "dph": 3678.03
+            },
+            {
+              "sazba": 12,
+              "zaklad": 1478.92,
+              "dph": 177.47
+            }
+          ],
+          "celkem": 22848.85,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Řezivo - dílna",
+          "kaktus": {
+            "id": 13,
+            "doklad": "FP260013",
+            "partnerId": 5,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        },
+        {
+          "typ": "faktura_prijata",
+          "cisloDokladu": "3285/2026",
+          "variabilniSymbol": "32852026",
+          "dodavatel": {
+            "nazev": "Droždí Kolín s.r.o.",
+            "ico": "90200021",
+            "dic": "CZ90200021",
+            "ulice": "Havlíčkova 260",
+            "mesto": "Kolín",
+            "psc": "28002",
+            "stat": "CZ"
+          },
+          "odberatel": {
+            "nazev": "Pekařství U Mlýna s.r.o.",
+            "ico": "90581130"
+          },
+          "datumVystaveni": "2026-09-18",
+          "duzp": "2026-09-18",
+          "datumSplatnosti": "2026-10-02",
+          "rozpisDph": [
+            {
+              "sazba": 21,
+              "zaklad": 7975.94,
+              "dph": 1674.95
+            },
+            {
+              "sazba": 0,
+              "zaklad": 544.16,
+              "dph": 0
+            }
+          ],
+          "celkem": 10195.05,
+          "mena": "CZK",
+          "kurz": null,
+          "popis": "Služby za období",
+          "kaktus": {
+            "id": 14,
+            "doklad": "FP260014",
+            "partnerId": 2,
+            "datumUhrady": null,
+            "poznamka": null
+          }
+        }
+      ],
+      "varovani": []
+    }
+  ]
+}
