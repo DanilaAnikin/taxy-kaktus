@@ -9,7 +9,10 @@ const firmy = () => readFile(join(DATA_DIR, "FIRMY.DBF"));
 
 test("parses FIRMY.DBF and decodes CP852", async () => {
   const table = parseDbf(await firmy(), "FIRMY.DBF");
-  assert.deepEqual(table.fields.map((field) => field.name), ["ID", "NAZEV", "ICO", "DIC", "SLOZKA", "PLATCE"]);
+  assert.deepEqual(
+    table.fields.map((field) => field.name),
+    ["ID", "NAZEV", "ICO", "DIC", "SLOZKA", "PLATCE"],
+  );
   assert.equal(table.records.length, 2);
   assert.equal(table.records[0]?.values.get("NAZEV")?.trim(), "Truhlářství Dvořák s.r.o.");
 });
@@ -23,10 +26,19 @@ test("rejects structurally broken files", async () => {
     "unknown language driver": patch(valid, 29, 0x99),
     "unsupported version": patch(valid, 0, 0x83),
     "invalid deletion flag": patch(valid, valid.readUInt16LE(8), 0x41),
+    "header shorter than its fields": patch(valid, 8, 64),
+    "record length not matching fields": patch(valid, 10, 75),
+    "unsupported field type": patch(valid, 32 + 11, 0x4d),
   };
   for (const [name, bytes] of Object.entries(broken)) {
     assert.throws(() => parseDbf(bytes, name), DbfFormatError, name);
   }
+});
+
+test("decodes text by the language driver in the header", async () => {
+  const valid = await firmy();
+  const asCp1250 = parseDbf(patch(valid, 29, 0xc8), "FIRMY.DBF");
+  assert.equal(asCp1250.records[0]?.values.get("NAZEV")?.trim(), "Truhl\u00a0\u00fdstv\u02c7 Dvo\u00fd\u00a0k s.r.o.");
 });
 
 test("retries a file that is being rewritten", async () => {

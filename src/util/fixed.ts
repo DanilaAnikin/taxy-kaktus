@@ -28,3 +28,16 @@ export function parseFixed(text: string, scale: number): number {
 export function fixedToNumber(value: number, scale: number): number {
   return value / 10 ** scale;
 }
+
+/** Converts a JSON number (e.g. 21480.5) to a scaled integer; throws on more decimals than the scale. */
+export function numberToFixed(value: number, scale: number): number {
+  if (!Number.isFinite(value)) throw new RangeError(`invalid number ${value}`);
+  return parseFixed(String(value), scale);
+}
+
+/** Formats a scaled integer as a plain decimal string ("1209.70", "-0.30"). */
+export function formatFixed(value: number, scale: number): string {
+  const digits = String(Math.abs(value)).padStart(scale + 1, "0");
+  const split = digits.length - scale;
+  return `${value < 0 ? "-" : ""}${digits.slice(0, split)}.${digits.slice(split)}`;
+}

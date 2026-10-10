@@ -65,11 +65,15 @@ export function parseDbf(bytes: Buffer, source: string): DbfTable {
   }
 
   const fieldsLength = fields.reduce((sum, field) => sum + field.length, 1);
-  if (fieldsLength !== recordLength) throw fail(`record length ${recordLength} does not match fields (${fieldsLength})`);
+  if (fieldsLength !== recordLength) {
+    throw fail(`record length ${recordLength} does not match fields (${fieldsLength})`);
+  }
 
   const dataEnd = headerLength + recordCount * recordLength;
   const sizeMatches = bytes.length === dataEnd || (bytes.length === dataEnd + 1 && bytes[dataEnd] === END_OF_FILE);
-  if (!sizeMatches) throw fail(`size ${bytes.length} B does not match ${recordCount} records in the header (${dataEnd} B)`);
+  if (!sizeMatches) {
+    throw fail(`size ${bytes.length} B does not match ${recordCount} records in the header (${dataEnd} B)`);
+  }
 
   const records: DbfRecord[] = [];
   for (let index = 0; index < recordCount; index++) {
@@ -89,7 +93,7 @@ export function parseDbf(bytes: Buffer, source: string): DbfTable {
 
 /**
  * Reads a DBF file and maps it. Kaktus rewrites files in place during an import, so a read that fails
- * to parse or map is retried before it is reported as corruption.
+ * to parse or map is retried before it is reported as corruption. A missing table counts as corrupted.
  */
 export async function readDbf<T>(
   path: string,
@@ -97,13 +101,21 @@ export async function readDbf<T>(
   { attempts = 3, retryDelayMs = 200 } = {},
 ): Promise<T> {
   for (let attempt = 1; ; attempt++) {
-    const bytes = await readFile(path);
     try {
-      return map(parseDbf(bytes, path));
+      return map(parseDbf(await readTableFile(path), path));
     } catch (error) {
       if (!(error instanceof DbfFormatError) || attempt >= attempts) throw error;
       await sleep(retryDelayMs);
     }
+  }
+}
+
+async function readTableFile(path: string): Promise<Buffer> {
+  try {
+    return await readFile(path);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") throw new DbfFormatError(`${path}: file is missing`);
+    throw error;
   }
 }
 

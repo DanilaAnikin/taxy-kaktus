@@ -50,20 +50,49 @@ export interface ReceivedInvoice {
 
 const COMPANY_FIELDS = { ID: "C", NAZEV: "C", ICO: "C", DIC: "C", SLOZKA: "C", PLATCE: "L" } as const;
 const PARTNER_FIELDS = {
-  ID: "N", NAZEV: "C", ICO: "N", DIC: "C", ULICE: "C", MESTO: "C", PSC: "C", STAT: "C", UCET: "C", POZN: "C",
+  ID: "N",
+  NAZEV: "C",
+  ICO: "N",
+  DIC: "C",
+  ULICE: "C",
+  MESTO: "C",
+  PSC: "C",
+  STAT: "C",
+  UCET: "C",
+  POZN: "C",
 } as const;
 const INVOICE_FIELDS = {
-  ID: "N", DOKLAD: "C", CISLODOD: "C", VS: "C", PARTNER: "N", DATVYST: "D", DATZDAN: "D", DATSPL: "D", DATUHR: "D",
-  ZAKL0: "N", ZAKL12: "N", DPH12: "N", ZAKL21: "N", DPH21: "N", CELKEM: "N", MENA: "C", KURZ: "N", TEXT: "C", POZN: "C",
+  ID: "N",
+  DOKLAD: "C",
+  CISLODOD: "C",
+  VS: "C",
+  PARTNER: "N",
+  DATVYST: "D",
+  DATZDAN: "D",
+  DATSPL: "D",
+  DATUHR: "D",
+  ZAKL0: "N",
+  ZAKL12: "N",
+  DPH12: "N",
+  ZAKL21: "N",
+  DPH21: "N",
+  CELKEM: "N",
+  MENA: "C",
+  KURZ: "N",
+  TEXT: "C",
+  POZN: "C",
 } as const;
 
-export function readCompanies(dataDir: string): Promise<Company[]> {
-  return readTable(join(dataDir, "FIRMY.DBF"), COMPANY_FIELDS, (r) => {
+export async function readCompanies(dataDir: string): Promise<Company[]> {
+  const path = join(dataDir, "FIRMY.DBF");
+  const companies = await readTable(path, COMPANY_FIELDS, (r) => {
     if (r.deleted) return null;
+    const id = r.required("ID");
+    if (!/^\d{4}$/.test(id)) r.fail("ID", `company id "${id}" is not four digits`);
     const folder = r.required("SLOZKA");
     if (!/^[A-Za-z0-9_-]+$/.test(folder)) r.fail("SLOZKA", `unsafe folder name "${folder}"`);
     return {
-      id: r.required("ID"),
+      id,
       name: r.required("NAZEV"),
       ico: r.ico("ICO"),
       dic: r.text("DIC"),
@@ -71,6 +100,10 @@ export function readCompanies(dataDir: string): Promise<Company[]> {
       vatPayer: r.logical("PLATCE"),
     };
   });
+  const ids = companies.map((company) => company.id);
+  const twice = ids.find((id, index) => ids.indexOf(id) !== index);
+  if (twice !== undefined) throw new DbfFormatError(`${path}: company id ${twice} appears twice`);
+  return companies;
 }
 
 export function readPartners(companyDir: string): Promise<Partner[]> {
@@ -127,7 +160,9 @@ function readTable<T>(
     for (const [name, type] of Object.entries(expected)) {
       const field = table.fields.find((candidate) => candidate.name === name);
       if (!field) throw new DbfFormatError(`${table.source}: missing field ${name}`);
-      if (field.type !== type) throw new DbfFormatError(`${table.source}: field ${name} is ${field.type}, expected ${type}`);
+      if (field.type !== type) {
+        throw new DbfFormatError(`${table.source}: field ${name} is ${field.type}, expected ${type}`);
+      }
     }
     return table.records.flatMap((record, index) => {
       const mapped = map(new Row(table, record, index));
