@@ -27,7 +27,7 @@ Observed behavior wins over the manual.
 
 ## Hard rules
 
-- Never write DBF files. Read DBF directly; write only via `node kaktus/kaktus.cjs import`.
+- Never write DBF files. Read DBF directly; write only via `node kaktus/kaktus.cjs import`. Sole exception: guarded restore from our own pre-batch backup (`docs/findings.md`, Decisions → Recovery).
 - The simulator is a black box: do not read, modify or deminify `kaktus/kaktus.cjs`. Learn its behavior by experiment.
 - `kaktus/`, `taxy/` and `ZADANI.md` are task inputs: do not edit. Run experiments on a copy (`mktemp -d`). If repo data changes, run `node kaktus/kaktus.cjs obnovit` and check `git status`.
 - No claims about Kaktus without an experiment. Record new findings in `docs/findings.md` before building on them.
@@ -77,10 +77,13 @@ Details and evidence in `docs/findings.md`.
 ## Commands
 
 ```
+npm test                                         # build + all tests
+npm run read -- [--data <dir>] [--out <file>]    # default kaktus/DATA → output/read.json
+
 node kaktus/kaktus.cjs import <batch.xml> [response.xml]
-node kaktus/kaktus.cjs obnovit            # reset kaktus/DATA
-node kaktus/kaktus.cjs zamknout <firma>   # accountant opens the company
-node kaktus/kaktus.cjs odemknout <firma>  # accountant closes it
+node kaktus/kaktus.cjs obnovit                   # reset kaktus/DATA
+node kaktus/kaktus.cjs zamknout <firma>          # accountant opens the company
+node kaktus/kaktus.cjs odemknout <firma>         # accountant closes it
 ```
 
 ## Deliverable limits

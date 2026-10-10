@@ -13,6 +13,7 @@ Basis for the design and the README. Method: the simulator (v3.2.1, Node 26) was
 | D5 | Field sizes: `NAZEV C40`, `CISLODOD C20`, `VS C10`, `TEXT C50`, `POZN C60`; amounts `N12.2`, rate `N10.4`, dates `D8` (empty `DATUHR` = unpaid). | 3 sizes only | field headers |
 | D6 | Foreign-currency amounts are stored in the document currency plus rate (FP260028: 1840.50 EUR, 24.78). CZK has rate `1.0000`. | – | record dump, EUR import |
 | D7 | In all 60 existing invoices, `CELKEM` equals the sum of bases and VAT exactly. | – | record dump |
+| D8 | 12 existing invoices charge VAT although the partner has no DIČ (Autodoprava Štěpánek, Obec Háje, Čalounictví Šíp, Servis pecí Žák). | – | record dump |
 
 ## Batch import
 
@@ -56,6 +57,7 @@ Basis for the design and the README. Method: the simulator (v3.2.1, Node 26) was
 | 9, 34 | IČO with leading zeros | fine (numeric match) |
 | 24 · 2026-0288 | IČO 90100077 has two partners | uses #7 |
 | 29 · KP-26-5512 | three VAT rates (21, 12, 0) | fine |
+| 19, 35 | 21 % VAT from Autodoprava Štěpánek, which has no DIČ (as in D8) | accept |
 | 3, 14 | new suppliers | create partner |
 
 Company 0001 has 30 documents, more than one batch holds (I3).
@@ -70,3 +72,16 @@ Company 0001 has 30 documents, more than one batch holds (I3).
 
 **Open period.** Not pre-checked. E220 is reported as `rejected` with reason "period closed".
 *Why:* the period lives inside Kaktus (I15); re-implementing a rule we cannot read would drift from it.
+
+**Recovery after an interrupted import.** Before each batch the whole company folder is backed up and the batch is recorded in a journal. If a company DBF is corrupted afterwards, it is restored automatically only when all of these hold:
+1. the journal has an unfinished batch for that company,
+2. a company DBF fails the integrity check,
+3. the journal's backup passes the integrity check and its checksum,
+4. no company file changed after the batch deadline (start + import timeout),
+5. the company is not open (`FIRMA.LCK`).
+
+Corrupted files are kept in quarantine; restore is temp file + rename; the batch is then reconciled and re-queued. Otherwise the company is halted with `error` and the backup path.
+*Why:* unattended operation needs self-healing, but the restore must never erase an accountant's work or hide corruption we did not cause. The conditions prove the damage is ours and nothing happened since.
+
+**Read output schema.** `read` reuses the TAXY document schema (Czech keys as in `taxy/doklady-k-zapisu.json`) plus a `kaktus` block (FP number, ids, paid date, note).
+*Why:* invoices read from Kaktus are directly comparable with documents TAXY sends for writing.
