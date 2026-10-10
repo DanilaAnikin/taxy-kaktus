@@ -1,0 +1,426 @@
+{
+  "vytvoreno": "2026-10-10T09:00:15.598Z",
+  "souhrn": {
+    "written": 0,
+    "already_exists": 32,
+    "rejected": 4,
+    "needs_review": 1,
+    "deferred": 0,
+    "error": 0
+  },
+  "udalosti": [],
+  "doklady": [
+    {
+      "id": "doc_b0e22b273a",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026-1042",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260047",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260047 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_e3fc203569",
+      "klientId": 4180,
+      "kaktusFirma": "0002",
+      "cisloDokladu": "FV-2610-0007",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260015",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260015 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_49aa18c650",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "FV2600318",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260048",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260048 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_70e0c21753",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "8120045566",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260049",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260049 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_c36efaf63f",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026-0931",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260045",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260045 (matched by supplier and document number)",
+      "varovani": []
+    },
+    {
+      "id": "doc_3c0d1615f6",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "260914",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260050",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260050 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_d38c9d950c",
+      "klientId": 5033,
+      "kaktusFirma": null,
+      "cisloDokladu": "2026/778",
+      "stav": "rejected",
+      "kaktusDoklad": null,
+      "kod": "UNKNOWN_CLIENT",
+      "zprava": "client 5033 is not in klienti.json",
+      "varovani": []
+    },
+    {
+      "id": "doc_39ad40f7b2",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "RE-2026-4471",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260051",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260051 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_5b2db4a6e2",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "NAJ-2026-10",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260052",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260052 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_1b3b94b6a4",
+      "klientId": 4180,
+      "kaktusFirma": "0002",
+      "cisloDokladu": "8120051190",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260016",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260016 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_846133b7f9",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2025-3391",
+      "stav": "rejected",
+      "kaktusDoklad": null,
+      "kod": "PERIOD_CLOSED",
+      "zprava": "Kaktus E220: Datum zdanitelného plnění je mimo otevřené účetní období 2026",
+      "varovani": []
+    },
+    {
+      "id": "doc_61ed535421",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "FV26001877",
+      "stav": "needs_review",
+      "kaktusDoklad": "FP260039",
+      "kod": "DELETED_IN_KAKTUS",
+      "zprava": "matches FP260039, deleted in Kaktus (\"Frézy - zadáno na špatnou firmu\"); not written again without a human decision",
+      "varovani": []
+    },
+    {
+      "id": "doc_00d80d05f4",
+      "klientId": 4172,
+      "kaktusFirma": null,
+      "cisloDokladu": "MO-26-07731",
+      "stav": "rejected",
+      "kaktusDoklad": null,
+      "kod": "BUYER_MISMATCH",
+      "zprava": "buyer IČO 90581130 is not company 0001 of client 4172 (IČO 90412761)",
+      "varovani": []
+    },
+    {
+      "id": "doc_fd3f74cd5a",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "VF-0931/26",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260053",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260053 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_a88ae33500",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "260914",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260050",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260050 (matched by supplier and document number)",
+      "varovani": []
+    },
+    {
+      "id": "doc_00a5091cef",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "NAJ-2026-09",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260042",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260042 (matched by supplier and document number)",
+      "varovani": [
+        {
+          "kod": "DIFFERS_FROM_KAKTUS",
+          "zprava": "variable symbol: Kaktus 2026009, TAXY 202609"
+        }
+      ]
+    },
+    {
+      "id": "doc_8c35263c12",
+      "klientId": 4180,
+      "kaktusFirma": "0002",
+      "cisloDokladu": "2610044",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260017",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260017 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_d7f54637a1",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "5526010933",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260054",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260054 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_340661d8d9",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": null,
+      "stav": "rejected",
+      "kaktusDoklad": null,
+      "kod": "MISSING_FIELD",
+      "zprava": "cisloDokladu is missing",
+      "varovani": []
+    },
+    {
+      "id": "doc_6f5274c9fa",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "7700214563",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260055",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260055 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_fe23b26c35",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026-311",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260056",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260056 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_fb9210fb46",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "FA-26-1190",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260057",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260057 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_fd03b52d28",
+      "klientId": 4180,
+      "kaktusFirma": "0002",
+      "cisloDokladu": "FV-2609-0188",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260012",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260012 (matched by supplier and document number)",
+      "varovani": []
+    },
+    {
+      "id": "doc_c34d189eac",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026-0288",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260058",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260058 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_dc39d3bb48",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "26100031",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260059",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260059 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_7c27eb8a9e",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026-2207",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260060",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260060 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_ace9251a46",
+      "klientId": 4180,
+      "kaktusFirma": "0002",
+      "cisloDokladu": "OS/2026/0915",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260018",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260018 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_33af52a1d5",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "3326004471",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260061",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260061 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_86bc621124",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "KP-26-5512",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260062",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260062 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_f20a25dc8e",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026101477",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260063",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260063 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_b08ed331f9",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "TP-0026611",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260064",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260064 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_f401f9f1b4",
+      "klientId": 4180,
+      "kaktusFirma": "0002",
+      "cisloDokladu": "2026-0612",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260019",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260019 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_6e9c99af61",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "26-0733",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260065",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260065 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_3e3fb059af",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026/041",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260066",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260066 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_8c8a7f4e87",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2600418",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260067",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260067 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_faa7cb724c",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026090",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260068",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260068 (matched by TAXY id)",
+      "varovani": []
+    },
+    {
+      "id": "doc_4550338e80",
+      "klientId": 4172,
+      "kaktusFirma": "0001",
+      "cisloDokladu": "2026-1066",
+      "stav": "already_exists",
+      "kaktusDoklad": "FP260069",
+      "kod": null,
+      "zprava": "already in Kaktus as FP260069 (matched by TAXY id)",
+      "varovani": []
+    }
+  ]
+}
