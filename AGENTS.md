@@ -27,7 +27,7 @@ Observed behavior wins over the manual.
 
 ## Hard rules
 
-- Never write DBF files. Read DBF directly; write only via `node kaktus/kaktus.cjs import`. Sole exception: guarded restore from our own pre-batch backup (`docs/findings.md`, Decisions → Recovery).
+- Never write DBF files. Read DBF directly; write only via `node kaktus/kaktus.cjs import`. Sole exception: guarded restore from our own pre-batch backup (`docs/findings.md`, Decisions → Recovery). The only other file we create in Kaktus data is our lock file.
 - The simulator is a black box: do not read, modify or deminify `kaktus/kaktus.cjs`. Learn its behavior by experiment.
 - `kaktus/`, `taxy/` and `ZADANI.md` are task inputs: do not edit. Run experiments on a copy (`mktemp -d`). If repo data changes, run `node kaktus/kaktus.cjs obnovit` and check `git status`.
 - No claims about Kaktus without an experiment. Record new findings in `docs/findings.md` before building on them.
@@ -39,10 +39,11 @@ Observed behavior wins over the manual.
 
 Details and evidence in `docs/findings.md`.
 
-- DBF encoding is CP852; batch and response are Windows-1250.
+- DBF encoding is CP852; batch and response are Windows-1250. Stored text must fit both.
 - Import does not detect duplicates: idempotency is our job.
 - Import processes at most 20 documents per batch and silently drops the rest: the response must contain one `Doklad` per sent document.
 - Import is not atomic, and concurrent imports into one company corrupt data: one import per company at a time, verify by re-reading DBF.
+- Without IČO, Kaktus links a supplier only to a partner without IČO with exactly the same name.
 - Over-long values are silently truncated: enforce field lengths before writing.
 
 ## Glossary
@@ -77,13 +78,35 @@ Details and evidence in `docs/findings.md`.
 ## Commands
 
 ```
-npm test                                         # build + all tests
-npm run read -- [--data <dir>] [--out <file>]    # default kaktus/DATA → output/read.json
+npm test                     # build + all tests; CHAOS_ROUNDS=200 npm test for a long random-kill run
+npm run lint                 # prettier check + type check
+npm run format               # prettier
+npm run read  -- [options]   # kaktus/DATA → output/read.json
+npm run write -- [options]   # taxy/doklady-k-zapisu.json → Kaktus, output/write-report.json
 
 node kaktus/kaktus.cjs import <batch.xml> [response.xml]
-node kaktus/kaktus.cjs obnovit                   # reset kaktus/DATA
-node kaktus/kaktus.cjs zamknout <firma>          # accountant opens the company
-node kaktus/kaktus.cjs odemknout <firma>         # accountant closes it
+node kaktus/kaktus.cjs obnovit             # reset kaktus/DATA (after any write run on repo data)
+node kaktus/kaktus.cjs zamknout <firma>    # accountant opens the company
+node kaktus/kaktus.cjs odemknout <firma>   # accountant closes it
+```
+
+`npm run write` changes `kaktus/DATA` and keeps connector state in `.kaktus-state/` (git-ignored).
+
+## Layout
+
+```
+src/cli.ts          commands, options, exit codes
+src/read.ts         read: DBF → TAXY document schema
+src/kaktus/         Kaktus access: dbf, tables, company (book, FIRMA.LCK), batch, response,
+                    process (runs the import), text, encoding, invoice (record type, field limits)
+src/taxy/input.ts   TAXY files and JSON validation
+src/write/plan.ts   authorization, validation, TAXY document → Kaktus invoice (pure)
+src/write/match.ts  matching against the book, supplier linking, write verification (pure)
+src/write/lock.ts   company lock file in the Kaktus company folder
+src/write/state.ts  journal, backups, restore
+src/write/write.ts  write orchestration per company
+src/util/           fixed-point money, atomic and durable file writes
+test/               unit tests; write, chaos, cli and output tests run the simulator on a temp copy
 ```
 
 ## Deliverable limits
