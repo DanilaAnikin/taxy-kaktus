@@ -1,0 +1,1307 @@
+[
+  {
+    "id": "doc_b0e22b273a",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026-1042",
+    "variabilniSymbol": "20261042",
+    "dodavatel": {
+      "nazev": "Dřevo Šumava a.s.",
+      "ico": "90100018",
+      "dic": "CZ90100018",
+      "ulice": "Nádražní 210",
+      "mesto": "Sušice",
+      "psc": "34201",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 21480.5,
+        "dph": 4510.91
+      }
+    ],
+    "celkem": 25991.41,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Řezivo smrk 30 mm"
+  },
+  {
+    "id": "doc_e3fc203569",
+    "klientId": 4180,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "FV-2610-0007",
+    "variabilniSymbol": "26100007",
+    "dodavatel": {
+      "nazev": "Mlýn Perner a.s.",
+      "ico": "90200012",
+      "dic": "CZ90200012",
+      "ulice": "Mlýnská 1",
+      "mesto": "Svijany",
+      "psc": "46346",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 12,
+        "zaklad": 28650,
+        "dph": 3438
+      }
+    ],
+    "celkem": 32088,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Mouka žitná chlebová"
+  },
+  {
+    "id": "doc_49aa18c650",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "FV2600318",
+    "variabilniSymbol": "2600318",
+    "dodavatel": {
+      "nazev": "Novák & syn, s.r.o.",
+      "ico": "90300017",
+      "dic": "CZ90300017",
+      "ulice": "Dlouhá 7",
+      "mesto": "Příbram",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 6890,
+        "dph": 1446.9
+      }
+    ],
+    "celkem": 8336.9,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Broušení nástrojů <září>"
+  },
+  {
+    "id": "doc_70e0c21753",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "8120045566",
+    "variabilniSymbol": "8120045566",
+    "dodavatel": {
+      "nazev": "Energie Brdy a.s.",
+      "ico": "90100051",
+      "dic": "CZ90100051",
+      "ulice": "Hailova 112",
+      "mesto": "Příbram",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 9450,
+        "dph": 1984.5
+      }
+    ],
+    "celkem": 11434.5,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Záloha elektřina 10/2026"
+  },
+  {
+    "id": "doc_c36efaf63f",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026-0931",
+    "variabilniSymbol": "20260931",
+    "dodavatel": {
+      "nazev": "ŽELEZÁŘSTVÍ ČÁP s.r.o.",
+      "ico": "90100026",
+      "dic": "CZ90100026",
+      "ulice": "Plzeňská 77",
+      "mesto": "Příbram",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-22",
+    "duzp": "2026-09-22",
+    "datumSplatnosti": "2026-10-06",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 3264.46,
+        "dph": 685.54
+      }
+    ],
+    "celkem": 3950,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Spojovací materiál"
+  },
+  {
+    "id": "doc_3c0d1615f6",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "260914",
+    "variabilniSymbol": "260914",
+    "dodavatel": {
+      "nazev": "Kování Říha, spol. s r.o.",
+      "ico": "90100034",
+      "dic": "CZ90100034",
+      "ulice": "Průmyslová 5",
+      "mesto": "Dobříš",
+      "psc": "26301",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-29",
+    "duzp": "2026-09-29",
+    "datumSplatnosti": "2026-10-13",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 15320,
+        "dph": 3217.2
+      }
+    ],
+    "celkem": 18537.2,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Panty a úchytky"
+  },
+  {
+    "id": "doc_d38c9d950c",
+    "klientId": 5033,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026/778",
+    "variabilniSymbol": "2026778",
+    "dodavatel": {
+      "nazev": "Papírnictví Sova s.r.o.",
+      "ico": "90300033",
+      "dic": "CZ90300033",
+      "ulice": "Náměstí 4",
+      "mesto": "Dobříš",
+      "psc": "26301",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Kadeřnictví Vlna s.r.o.",
+      "ico": "90300092"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 1240,
+        "dph": 260.4
+      }
+    ],
+    "celkem": 1500.4,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Kancelářské potřeby"
+  },
+  {
+    "id": "doc_39ad40f7b2",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "RE-2026-4471",
+    "variabilniSymbol": "20264471",
+    "dodavatel": {
+      "nazev": "Holz Bauer GmbH",
+      "ico": null,
+      "dic": "DE812345678",
+      "ulice": "Industriestr. 14",
+      "mesto": "Passau",
+      "psc": "94036",
+      "stat": "DE"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-30",
+    "duzp": "2026-09-30",
+    "datumSplatnosti": "2026-10-14",
+    "rozpisDph": [
+      {
+        "sazba": 0,
+        "zaklad": 2360,
+        "dph": 0
+      }
+    ],
+    "celkem": 2360,
+    "mena": "EUR",
+    "kurz": 24.315,
+    "popis": "Eichenfurnier 0,6 mm"
+  },
+  {
+    "id": "doc_5b2db4a6e2",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "NAJ-2026-10",
+    "variabilniSymbol": "202610",
+    "dodavatel": {
+      "nazev": "Obec Háje",
+      "ico": "00242659",
+      "dic": null,
+      "ulice": "Háje 39",
+      "mesto": "Háje",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 0,
+        "zaklad": 12500,
+        "dph": 0
+      }
+    ],
+    "celkem": 12500,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Nájem dílny 10/2026"
+  },
+  {
+    "id": "doc_1b3b94b6a4",
+    "klientId": 4180,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "8120051190",
+    "variabilniSymbol": "8120051190",
+    "dodavatel": {
+      "nazev": "Energie Brdy a.s.",
+      "ico": "90100051",
+      "dic": "CZ90100051",
+      "ulice": "Hailova 112",
+      "mesto": "Příbram",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 14200,
+        "dph": 2982
+      }
+    ],
+    "celkem": 17182,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Záloha elektřina 10/2026"
+  },
+  {
+    "id": "doc_846133b7f9",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2025-3391",
+    "variabilniSymbol": "20253391",
+    "dodavatel": {
+      "nazev": "Lepidla Újezd s.r.o.",
+      "ico": "90100107",
+      "dic": "CZ90100107",
+      "ulice": "Školní 3",
+      "mesto": "Újezd u Brna",
+      "psc": "66453",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2025-12-30",
+    "duzp": "2025-12-29",
+    "datumSplatnosti": "2026-01-13",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 2870,
+        "dph": 602.7
+      }
+    ],
+    "celkem": 3472.7,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Lepidlo PUR - dodatečně doručeno"
+  },
+  {
+    "id": "doc_61ed535421",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "FV26001877",
+    "variabilniSymbol": "26001877",
+    "dodavatel": {
+      "nazev": "Nářadí Kuběna s.r.o.",
+      "ico": "90100085",
+      "dic": "CZ90100085",
+      "ulice": "Skladová 9",
+      "mesto": "Plzeň",
+      "psc": "30100",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-18",
+    "duzp": "2026-09-18",
+    "datumSplatnosti": "2026-10-02",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 4120,
+        "dph": 865.2
+      }
+    ],
+    "celkem": 4985.2,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Frézy stopkové"
+  },
+  {
+    "id": "doc_00d80d05f4",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "MO-26-07731",
+    "variabilniSymbol": "2607731",
+    "dodavatel": {
+      "nazev": "Mlékárna Olešná a.s.",
+      "ico": "90200039",
+      "dic": "CZ90200039",
+      "ulice": "Olešná 15",
+      "mesto": "Olešná",
+      "psc": "26901",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 12,
+        "zaklad": 8420,
+        "dph": 1010.4
+      }
+    ],
+    "celkem": 9430.4,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Máslo, smetana"
+  },
+  {
+    "id": "doc_fd3f74cd5a",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "VF-0931/26",
+    "variabilniSymbol": "093126",
+    "dodavatel": {
+      "nazev": "Výroba a montáž dřevěných konstrukcí Hořovice, výrobní družstvo",
+      "ico": "90300025",
+      "dic": "CZ90300025",
+      "ulice": "Tlustice 80",
+      "mesto": "Hořovice",
+      "psc": "26801",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-30",
+    "duzp": "2026-09-30",
+    "datumSplatnosti": "2026-10-14",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 48200,
+        "dph": 10122
+      }
+    ],
+    "celkem": 58322,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Krov - díl A → montáž 10/2026"
+  },
+  {
+    "id": "doc_a88ae33500",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "260914",
+    "variabilniSymbol": "260914",
+    "dodavatel": {
+      "nazev": "Kování Říha, spol. s r.o.",
+      "ico": "90100034",
+      "dic": "CZ90100034",
+      "ulice": "Průmyslová 5",
+      "mesto": "Dobříš",
+      "psc": "26301",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-29",
+    "duzp": "2026-09-29",
+    "datumSplatnosti": "2026-10-13",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 15320,
+        "dph": 3217.2
+      }
+    ],
+    "celkem": 18537.2,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Fwd: faktura 260914"
+  },
+  {
+    "id": "doc_00a5091cef",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "NAJ-2026-09",
+    "variabilniSymbol": "202609",
+    "dodavatel": {
+      "nazev": "Obec Háje",
+      "ico": "00242659",
+      "dic": null,
+      "ulice": "Háje 39",
+      "mesto": "Háje",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-01",
+    "duzp": "2026-09-01",
+    "datumSplatnosti": "2026-09-15",
+    "rozpisDph": [
+      {
+        "sazba": 0,
+        "zaklad": 12500,
+        "dph": 0
+      }
+    ],
+    "celkem": 12500,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Nájem dílny 09/2026"
+  },
+  {
+    "id": "doc_8c35263c12",
+    "klientId": 4180,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2610044",
+    "variabilniSymbol": "2610044",
+    "dodavatel": {
+      "nazev": "Droždí Kolín s.r.o.",
+      "ico": "90200021",
+      "dic": "CZ90200021",
+      "ulice": "Havlíčkova 260",
+      "mesto": "Kolín",
+      "psc": "28002",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 12,
+        "zaklad": 3980,
+        "dph": 477.6
+      }
+    ],
+    "celkem": 4457.6,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Droždí čerstvé"
+  },
+  {
+    "id": "doc_d7f54637a1",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "5526010933",
+    "variabilniSymbol": "5526010933",
+    "dodavatel": {
+      "nazev": "Telefonie Střed a.s.",
+      "ico": "90100123",
+      "dic": "CZ90100123",
+      "ulice": "Na Pankráci 30",
+      "mesto": "Praha 4",
+      "psc": "14000",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 1487.6,
+        "dph": 312.4
+      }
+    ],
+    "celkem": 1800,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Telefony 09/2026"
+  },
+  {
+    "id": "doc_340661d8d9",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": null,
+    "variabilniSymbol": "2600412",
+    "dodavatel": {
+      "nazev": "Autodoprava Štěpánek",
+      "ico": "90100093",
+      "dic": null,
+      "ulice": "Milín 204",
+      "mesto": "Milín",
+      "psc": "26231",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-30",
+    "duzp": "2026-09-30",
+    "datumSplatnosti": "2026-10-14",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 5600,
+        "dph": 1176
+      }
+    ],
+    "celkem": 6776,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Přeprava řeziva Sušice - Příbram"
+  },
+  {
+    "id": "doc_6f5274c9fa",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "7700214563",
+    "variabilniSymbol": "7700214563",
+    "dodavatel": {
+      "nazev": "Pojišťovna Lípa a.s.",
+      "ico": "90100131",
+      "dic": "CZ90100131",
+      "ulice": "Spálená 14",
+      "mesto": "Praha 1",
+      "psc": "11000",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 0,
+        "zaklad": 8640,
+        "dph": 0
+      }
+    ],
+    "celkem": 8640,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Pojištění dílny Q4/2026"
+  },
+  {
+    "id": "doc_fe23b26c35",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026-311",
+    "variabilniSymbol": "2026311",
+    "dodavatel": {
+      "nazev": "Úklid Šťastný s.r.o.",
+      "ico": "90100140",
+      "dic": "CZ90100140",
+      "ulice": "Žežická 8",
+      "mesto": "Příbram",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-30",
+    "duzp": "2026-09-30",
+    "datumSplatnosti": "2026-10-14",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 3200,
+        "dph": 672
+      }
+    ],
+    "celkem": 3872,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Úklid 09/2026"
+  },
+  {
+    "id": "doc_fb9210fb46",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "FA-26-1190",
+    "variabilniSymbol": "261190",
+    "dodavatel": {
+      "nazev": "Lakovna Žďár s.r.o.",
+      "ico": "90100042",
+      "dic": "CZ90100042",
+      "ulice": "Jihlavská 1140",
+      "mesto": "Žďár nad Sázavou",
+      "psc": "59101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 17640,
+        "dph": 3704.4
+      }
+    ],
+    "celkem": 21344.4,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Lakování dvířek"
+  },
+  {
+    "id": "doc_fd03b52d28",
+    "klientId": 4180,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "FV-2609-0188",
+    "variabilniSymbol": "26090188",
+    "dodavatel": {
+      "nazev": "Mlýn Perner a.s.",
+      "ico": "90200012",
+      "dic": "CZ90200012",
+      "ulice": "Mlýnská 1",
+      "mesto": "Svijany",
+      "psc": "46346",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130"
+    },
+    "datumVystaveni": "2026-09-25",
+    "duzp": "2026-09-25",
+    "datumSplatnosti": "2026-10-09",
+    "rozpisDph": [
+      {
+        "sazba": 12,
+        "zaklad": 31200,
+        "dph": 3744
+      }
+    ],
+    "celkem": 34944,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Mouka pšeničná hladká"
+  },
+  {
+    "id": "doc_c34d189eac",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026-0288",
+    "variabilniSymbol": "20260288",
+    "dodavatel": {
+      "nazev": "Pila Ořech s.r.o.",
+      "ico": "90100077",
+      "dic": "CZ90100077",
+      "ulice": "Lesní 12",
+      "mesto": "Rožmitál pod Třemšínem",
+      "psc": "26242",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 11200,
+        "dph": 2352
+      }
+    ],
+    "celkem": 13552,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Pořez kulatiny"
+  },
+  {
+    "id": "doc_dc39d3bb48",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "26100031",
+    "variabilniSymbol": "26100031",
+    "dodavatel": {
+      "nazev": "Brusivo Čáslav s.r.o.",
+      "ico": "90100115",
+      "dic": "CZ90100115",
+      "ulice": "Chrudimská 55",
+      "mesto": "Čáslav",
+      "psc": "28601",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 2017,
+        "dph": 423.57
+      }
+    ],
+    "celkem": 2441,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Brusné pásy"
+  },
+  {
+    "id": "doc_7c27eb8a9e",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026-2207",
+    "variabilniSymbol": "20262207",
+    "dodavatel": {
+      "nazev": "Lepidla Újezd s.r.o.",
+      "ico": "90100107",
+      "dic": "CZ90100107",
+      "ulice": "Školní 3",
+      "mesto": "Újezd u Brna",
+      "psc": "66453",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 4310,
+        "dph": 905.1
+      }
+    ],
+    "celkem": 5215.1,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Lepidlo D3"
+  },
+  {
+    "id": "doc_ace9251a46",
+    "klientId": 4180,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "OS/2026/0915",
+    "variabilniSymbol": "20260915",
+    "dodavatel": {
+      "nazev": "Obaly Šafář s.r.o.",
+      "ico": "90200047",
+      "dic": "CZ90200047",
+      "ulice": "Tovární 8",
+      "mesto": "Hořovice",
+      "psc": "26801",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 6240,
+        "dph": 1310.4
+      }
+    ],
+    "celkem": 7550.4,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Papírové sáčky"
+  },
+  {
+    "id": "doc_33af52a1d5",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "3326004471",
+    "variabilniSymbol": "3326004471",
+    "dodavatel": {
+      "nazev": "Vodovody Příbramsko s.r.o.",
+      "ico": "90100069",
+      "dic": "CZ90100069",
+      "ulice": "Čs. armády 400",
+      "mesto": "Příbram",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 12,
+        "zaklad": 1860,
+        "dph": 223.2
+      }
+    ],
+    "celkem": 2083.2,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Vodné a stočné 09/2026"
+  },
+  {
+    "id": "doc_86bc621124",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "KP-26-5512",
+    "variabilniSymbol": "265512",
+    "dodavatel": {
+      "nazev": "Kancelářské potřeby Ďáblice s.r.o.",
+      "ico": "90100174",
+      "dic": "CZ90100174",
+      "ulice": "Ďáblická 66",
+      "mesto": "Praha 8",
+      "psc": "18200",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-30",
+    "duzp": "2026-09-30",
+    "datumSplatnosti": "2026-10-14",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 1019.9,
+        "dph": 214.18
+      },
+      {
+        "sazba": 12,
+        "zaklad": 310.3,
+        "dph": 37.24
+      },
+      {
+        "sazba": 0,
+        "zaklad": 45.7,
+        "dph": 0
+      }
+    ],
+    "celkem": 1627.32,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Papír, tonery, známky"
+  },
+  {
+    "id": "doc_f20a25dc8e",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026101477",
+    "variabilniSymbol": "2026101477",
+    "dodavatel": {
+      "nazev": "Spojovací materiál Třešť s.r.o.",
+      "ico": "90100182",
+      "dic": "CZ90100182",
+      "ulice": "Revoluční 20",
+      "mesto": "Třešť",
+      "psc": "58901",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 7730,
+        "dph": 1623.3
+      }
+    ],
+    "celkem": 9353.3,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Vruty, konfirmáty"
+  },
+  {
+    "id": "doc_b08ed331f9",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "TP-0026611",
+    "variabilniSymbol": "0026611",
+    "dodavatel": {
+      "nazev": "Technické plyny Ústí s.r.o.",
+      "ico": "90100239",
+      "dic": "CZ90100239",
+      "ulice": "Přístavní 2",
+      "mesto": "Ústí nad Labem",
+      "psc": "40001",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 2150,
+        "dph": 451.5
+      }
+    ],
+    "celkem": 2601.5,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Nájem lahví 09/2026"
+  },
+  {
+    "id": "doc_f401f9f1b4",
+    "klientId": 4180,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026-0612",
+    "variabilniSymbol": "20260612",
+    "dodavatel": {
+      "nazev": "Vejce Líšno s.r.o.",
+      "ico": "90200080",
+      "dic": "CZ90200080",
+      "ulice": "Líšno 2",
+      "mesto": "Bystřice",
+      "psc": "25751",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 12,
+        "zaklad": 4725,
+        "dph": 567
+      }
+    ],
+    "celkem": 5292,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Vejce M"
+  },
+  {
+    "id": "doc_6e9c99af61",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "26-0733",
+    "variabilniSymbol": "260733",
+    "dodavatel": {
+      "nazev": "Sklenářství Křišťál s.r.o.",
+      "ico": "90100221",
+      "dic": "CZ90100221",
+      "ulice": "Plzeňská 301",
+      "mesto": "Beroun",
+      "psc": "26601",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-09-30",
+    "duzp": "2026-09-30",
+    "datumSplatnosti": "2026-10-14",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 9870,
+        "dph": 2072.7
+      }
+    ],
+    "celkem": 11942.7,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Skla do vitrín"
+  },
+  {
+    "id": "doc_3e3fb059af",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026/041",
+    "variabilniSymbol": "2026041",
+    "dodavatel": {
+      "nazev": "Čalounictví Šíp",
+      "ico": "04512375",
+      "dic": null,
+      "ulice": "Tyršova 41",
+      "mesto": "Sedlčany",
+      "psc": "26401",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 0,
+        "zaklad": 14300,
+        "dph": 0
+      }
+    ],
+    "celkem": 14300,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Čalounění lavic"
+  },
+  {
+    "id": "doc_8c8a7f4e87",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2600418",
+    "variabilniSymbol": "2600418",
+    "dodavatel": {
+      "nazev": "Autodoprava Štěpánek",
+      "ico": "90100093",
+      "dic": null,
+      "ulice": "Milín 204",
+      "mesto": "Milín",
+      "psc": "26231",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-02",
+    "duzp": "2026-10-02",
+    "datumSplatnosti": "2026-10-16",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 4900,
+        "dph": 1029
+      }
+    ],
+    "celkem": 5929,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Přeprava desek"
+  },
+  {
+    "id": "doc_faa7cb724c",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026090",
+    "variabilniSymbol": "2026090",
+    "dodavatel": {
+      "nazev": "Účetní kancelář Habrová s.r.o.",
+      "ico": "90100212",
+      "dic": "CZ90100212",
+      "ulice": "Pražská 18",
+      "mesto": "Příbram",
+      "psc": "26101",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-01",
+    "duzp": "2026-10-01",
+    "datumSplatnosti": "2026-10-15",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 9500,
+        "dph": 1995
+      }
+    ],
+    "celkem": 11495,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Vedení účetnictví 09/2026"
+  },
+  {
+    "id": "doc_4550338e80",
+    "klientId": 4172,
+    "typ": "faktura_prijata",
+    "stav": "schvaleno",
+    "cisloDokladu": "2026-1066",
+    "variabilniSymbol": "20261066",
+    "dodavatel": {
+      "nazev": "Dřevo Šumava a.s.",
+      "ico": "90100018",
+      "dic": "CZ90100018",
+      "ulice": "Nádražní 210",
+      "mesto": "Sušice",
+      "psc": "34201",
+      "stat": "CZ"
+    },
+    "odberatel": {
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761"
+    },
+    "datumVystaveni": "2026-10-05",
+    "duzp": "2026-10-05",
+    "datumSplatnosti": "2026-10-19",
+    "rozpisDph": [
+      {
+        "sazba": 21,
+        "zaklad": 33910,
+        "dph": 7121.1
+      }
+    ],
+    "celkem": 41031.1,
+    "mena": "CZK",
+    "kurz": null,
+    "popis": "Řezivo dub 52 mm"
+  }
+]

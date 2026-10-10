@@ -1,0 +1,151 @@
+KAKTUS ÚČTO 3.2
+Příručka správce - struktura dat a dávkový import
+(c) 2014 Kaktus Software s.r.o.                      revize 3.2/11-2014
+
+
+1. DATOVÉ SOUBORY
+-----------------
+
+Program ukládá data do souborů formátu dBase III (DBF). Texty jsou
+uloženy v kódování Windows-1250. Datum je uloženo ve tvaru RRRRMMDD.
+
+Složka DATA obsahuje soubor FIRMY.DBF se seznamem účetních jednotek
+a pro každou účetní jednotku podsložku s jejími daty.
+
+FIRMY.DBF - účetní jednotky
+  ID        označení firmy (čtyři číslice)
+  NAZEV     název
+  ICO, DIC  identifikace
+  SLOZKA    název podsložky s daty
+  PLATCE    plátce DPH
+
+ADRESAR.DBF - adresář partnerů
+  ID        interní číslo partnera
+  NAZEV     název (40 znaků)
+  ICO       IČO
+  DIC       DIČ
+  ULICE, MESTO, PSC, STAT   adresa
+  UCET      bankovní účet
+  POZN      poznámka
+
+FAKPRI.DBF - kniha přijatých faktur
+  ID        interní číslo záznamu
+  DOKLAD    číslo dokladu v číselné řadě (FPrrnnnn)
+  CISLODOD  číslo dokladu dodavatele
+  VS        variabilní symbol
+  PARTNER   interní číslo partnera z adresáře
+  DATVYST   datum vystavení
+  DATZDAN   datum zdanitelného plnění
+  DATSPL    datum splatnosti
+  DATUHR    datum úhrady
+  ZAKL0     částka osvobozená / mimo DPH
+  ZAKL12, DPH12   základ a daň ve snížené sazbě
+  ZAKL21, DPH21   základ a daň v základní sazbě
+  CELKEM    celková částka dokladu
+  MENA      měna dokladu
+  KURZ      kurz k CZK (u dokladů v cizí měně)
+  TEXT      text dokladu (50 znaků)
+  POZN      poznámka (60 znaků)
+
+
+2. DÁVKOVÝ IMPORT
+-----------------
+
+Import se spouští z příkazové řádky:
+
+  KAKTUS.EXE /IMPORT davka.xml [odpoved.xml]
+
+Není-li uveden soubor odpovědi, vytvoří se vedle dávky soubor se
+stejným názvem a příponou .odpoved.xml.
+
+Dávka je soubor XML v kódování Windows-1250. Jedna dávka obsahuje
+doklady jedné účetní jednotky.
+
+Import nelze provést, má-li účetní jednotku otevřenou jiný uživatel.
+
+Příklad dávky:
+
+  <?xml version="1.0" encoding="windows-1250"?>
+  <KaktusDavka verze="3.2" firma="0001">
+    <FakturaPrijata>
+      <CisloDodavatele>2014-0457</CisloDodavatele>
+      <VarSymbol>20140457</VarSymbol>
+      <Dodavatel>
+        <Nazev>Vzorová firma s.r.o.</Nazev>
+        <ICO>12345678</ICO>
+        <DIC>CZ12345678</DIC>
+        <Ulice>Hlavní 1</Ulice>
+        <Mesto>Praha</Mesto>
+        <PSC>11000</PSC>
+        <Stat>CZ</Stat>
+      </Dodavatel>
+      <DatumVystaveni>2014-11-03</DatumVystaveni>
+      <DatumZdanPlneni>2014-11-03</DatumZdanPlneni>
+      <DatumSplatnosti>2014-11-17</DatumSplatnosti>
+      <Zaklad0>0.00</Zaklad0>
+      <Zaklad12>0.00</Zaklad12>
+      <DPH12>0.00</DPH12>
+      <Zaklad21>1000.00</Zaklad21>
+      <DPH21>210.00</DPH21>
+      <Celkem>1210.00</Celkem>
+      <Mena>CZK</Mena>
+      <Text>Zboží dle objednávky</Text>
+      <Poznamka></Poznamka>
+    </FakturaPrijata>
+  </KaktusDavka>
+
+Prvky dokladu:
+
+  CisloDodavatele   povinný   číslo dokladu dodavatele
+  VarSymbol                   variabilní symbol
+  Dodavatel/Nazev   povinný   název dodavatele
+  Dodavatel/ICO               IČO (pouze číslice)
+  Dodavatel/DIC, Ulice, Mesto, PSC, Stat, Ucet
+  DatumVystaveni    povinný   RRRR-MM-DD
+  DatumZdanPlneni             RRRR-MM-DD; není-li uvedeno, použije se
+                              datum vystavení
+  DatumSplatnosti             RRRR-MM-DD
+  Zaklad0, Zaklad12, DPH12, Zaklad21, DPH21
+                              částky s desetinnou tečkou
+  Celkem            povinný   celková částka dokladu
+  Mena                        kód měny, výchozí CZK
+  Kurz                        povinný u cizí měny
+  Text                        text dokladu
+  Poznamka                    poznámka
+
+Partner se v adresáři dohledá podle IČO. Partner bez IČO se dohledá
+podle názvu. Není-li partner nalezen, založí se nový.
+
+Doklad dostane další volné číslo v řadě přijatých faktur.
+
+
+3. ODPOVĚĎ
+----------
+
+Odpověď obsahuje jeden prvek Doklad pro každý doklad dávky:
+
+  <KaktusOdpoved firma="0001" zapsano="1" odmitnuto="1">
+    <Doklad poradi="1" stav="OK" doklad="FP140012"/>
+    <Doklad poradi="2" stav="CHYBA" kod="E101" zprava="..."/>
+  </KaktusOdpoved>
+
+Návratový kód programu:
+
+  0   dávka byla zpracována
+  1   při zpracování došlo k chybě
+
+
+4. CHYBOVÉ KÓDY DOKLADU
+-----------------------
+
+  E100   neznámý typ dokladu
+  E101   chybí povinný údaj
+  E120   neplatné datum
+  E130   neplatný formát částky
+  E140   neplatné IČO
+  E210   celková částka neodpovídá součtu základů a daně
+  E220   datum zdanitelného plnění je mimo otevřené účetní období
+  E230   neplatná měna nebo chybí kurz
+
+
+Technická podpora: podpora@kaktus-software.example

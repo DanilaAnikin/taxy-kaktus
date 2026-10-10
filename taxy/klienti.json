@@ -1,0 +1,20 @@
+{
+  "kancelar": {
+    "id": 318,
+    "nazev": "Účetní kancelář Habrová s.r.o."
+  },
+  "klienti": [
+    {
+      "klientId": 4172,
+      "nazev": "Truhlářství Dvořák s.r.o.",
+      "ico": "90412761",
+      "kaktusFirma": "0001"
+    },
+    {
+      "klientId": 4180,
+      "nazev": "Pekařství U Mlýna s.r.o.",
+      "ico": "90581130",
+      "kaktusFirma": "0002"
+    }
+  ]
+}
