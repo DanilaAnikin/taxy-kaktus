@@ -1,0 +1,25 @@
+{
+  "name": "taxy-kaktus-connector",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kaktus Účto 3.2 module for the TAXY Connector",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "kaktus-connector": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "read": "npm run build --silent && node dist/src/cli.js read"
+  },
+  "dependencies": {
+    "iconv-lite": "0.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "18.19.130",
+    "typescript": "7.0.2"
+  }
+}
