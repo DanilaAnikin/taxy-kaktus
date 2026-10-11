@@ -1,10 +1,11 @@
 import assert from "node:assert/strict";
-import { spawnSync } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 import { readFile, utimes, writeFile } from "node:fs/promises";
+import { hostname } from "node:os";
 import { join } from "node:path";
 import { test } from "node:test";
 import { LOCK_FILE, lockCompany } from "../src/write/lock.js";
-import { kaktusCopy } from "./helpers.js";
+import { kaktusCopy, withoutProcessList } from "./helpers.js";
 
 const companyDir = async () => join(await kaktusCopy(), "DATA", "0001");
 
@@ -40,6 +41,26 @@ test("a lock left by a dead process or not renewed for 30 minutes is taken over"
   const moment = new Date(Date.now() - 11_000);
   await utimes(path, moment, moment);
   assert.ok(await lockCompany(dir), "an unreadable lock file left by a crash");
+});
+
+test("on this computer a running owner keeps its lock however old it looks; a reused pid does not", async () => {
+  const dir = await companyDir();
+  const path = join(dir, LOCK_FILE);
+  const owner = spawn(process.execPath, ["-e", "setInterval(() => {}, 1000)"], { stdio: "ignore" });
+  const lockedAt = (since: Date) =>
+    writeFile(path, JSON.stringify({ pid: owner.pid, host: hostname(), since: since.toISOString(), token: "other" }));
+  const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
+  try {
+    await lockedAt(new Date());
+    await utimes(path, twoHoursAgo, twoHoursAgo); // e.g. the clock was moved forward meanwhile
+    assert.equal(await lockCompany(dir), null, "running owner");
+    assert.ok(await withoutProcessList(() => lockCompany(dir)), "without the process list, the age decides");
+
+    await lockedAt(twoHoursAgo);
+    assert.ok(await lockCompany(dir), "the pid belongs to a process started after the lock was taken");
+  } finally {
+    owner.kill();
+  }
 });
 
 test("a run that lost its lock notices it and does not remove the new owner's lock", async () => {

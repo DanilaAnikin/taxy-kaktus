@@ -4,11 +4,12 @@ import { buildBatch, MAX_BATCH_SIZE } from "../kaktus/batch.js";
 import { openedBy, readBook, type Book } from "../kaktus/company.js";
 import { DbfFormatError } from "../kaktus/dbf.js";
 import { documentIdOf } from "../kaktus/invoice.js";
-import { runImport, type ImportRun, type KaktusProgram } from "../kaktus/process.js";
+import { runImport, runningImports, type ImportRun, type KaktusProgram } from "../kaktus/process.js";
 import { parseResponse, type ResponseDocument } from "../kaktus/response.js";
 import { readCompanies, type Company } from "../kaktus/tables.js";
 import type { TaxyClient } from "../taxy/input.js";
 import { writeFileAtomic } from "../util/fs.js";
+import { stopProcess } from "../util/processes.js";
 import { lockCompany, type CompanyLock } from "./lock.js";
 import { findInBook, linkSupplier, naturalKeys, verifyRecord, type BookMatch, type LinkedSupplier } from "./match.js";
 import { planDocument, type WritePlan } from "./plan.js";
@@ -436,10 +437,9 @@ class CompanyRun {
       const zprava = `journal of batch ${journal.batchId} belongs to ${journal.companyDir}, not ${resolve(this.dir)}; connector state is shared by two Kaktus data folders; manual check needed`;
       return this.halt("error", "KAKTUS_STATE_MISMATCH", zprava);
     }
-    if (!importEnded && Date.now() <= Date.parse(journal.deadline)) {
-      // The run that started this batch died; its import may still be writing until the deadline.
-      const zprava = `batch ${journal.batchId} of an earlier run may still be importing until ${journal.deadline}`;
-      return this.halt("deferred", "RECOVERY_POSTPONED", zprava);
+    if (!importEnded) {
+      const stop = await this.stopLeftoverImport(journal);
+      if (stop) return stop;
     }
     const how = importEnded ? "interrupted during the import" : "interrupted in an earlier run";
     if (await this.readBookOrNull()) {
@@ -471,6 +471,32 @@ class CompanyRun {
       `${corrupted}; restored from the pre-batch backup, corrupted files kept in ${quarantine}`,
     );
     return "restored";
+  }
+
+  /**
+   * The run that started this batch died, and its import must not write while we inspect or restore the data.
+   * A leftover import is stopped; only without the process list does the deadline decide (clock dependent).
+   */
+  private async stopLeftoverImport(journal: JournalEntry): Promise<Stop | null> {
+    let running: number[];
+    try {
+      running = await runningImports(this.state.batchFiles(this.company.id, journal.batchId));
+    } catch (error) {
+      if (Date.now() > Date.parse(journal.deadline)) return null;
+      const zprava = `batch ${journal.batchId} of an earlier run may still be importing until ${journal.deadline} (process list unavailable: ${(error as Error).message})`;
+      return this.halt("deferred", "RECOVERY_POSTPONED", zprava);
+    }
+    for (const pid of running) {
+      if (!(await stopProcess(pid))) {
+        const zprava = `the import of batch ${journal.batchId} of an earlier run is still running (pid ${pid}) and could not be stopped`;
+        return this.halt("deferred", "RECOVERY_POSTPONED", zprava);
+      }
+      this.event(
+        "IMPORT_STOPPED",
+        `the import of batch ${journal.batchId} outlived the run that started it and was stopped (pid ${pid})`,
+      );
+    }
+    return null;
   }
 
   private async readBookOrNull(): Promise<Book | null> {

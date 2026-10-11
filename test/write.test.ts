@@ -1,18 +1,30 @@
 import assert from "node:assert/strict";
-import { execFileSync } from "node:child_process";
-import { chmod, mkdir, readdir, rm, stat, utimes, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { execFileSync, spawn } from "node:child_process";
+import { once } from "node:events";
+import { chmod, mkdir, readdir, readFile, rm, stat, utimes, writeFile } from "node:fs/promises";
+import { basename, dirname, join } from "node:path";
 import { test } from "node:test";
+import { setTimeout as sleep } from "node:timers/promises";
 import { buildBatch } from "../src/kaktus/batch.js";
 import { readBook } from "../src/kaktus/company.js";
 import { kaktusProgram, type KaktusProgram } from "../src/kaktus/process.js";
 import { loadClients } from "../src/taxy/input.js";
+import { isAlive } from "../src/util/processes.js";
 import { lockCompany } from "../src/write/lock.js";
 import { StateStore } from "../src/write/state.js";
 import type { DocumentResult, WriteReport } from "../src/write/types.js";
 import { writeKaktus, type WriteOptions } from "../src/write/write.js";
-import { kaktusSetup } from "./helpers.js";
-import { CLIENTS_PATH, DOCUMENTS, EXPECTED, taxyDocument, taxyRecords, WRITTEN_IDS, writePlan } from "./taxy.js";
+import { CLI, kaktusSetup, withoutProcessList } from "./helpers.js";
+import {
+  CLIENTS_PATH,
+  DOCUMENTS,
+  DOCUMENTS_PATH,
+  EXPECTED,
+  taxyDocument,
+  taxyRecords,
+  WRITTEN_IDS,
+  writePlan,
+} from "./taxy.js";
 
 const clients = await loadClients(CLIENTS_PATH);
 const BAKERY = DOCUMENTS.filter((document) => document.klientId === 4180);
@@ -343,7 +355,7 @@ test("after an interrupted run with intact data, documents already written are r
 
 test("data corrupted by an interrupted batch are restored from its backup", async () => {
   const { options } = await kaktusSetup();
-  await interruptedBatch(options, { corrupt: true });
+  const batchId = await interruptedBatch(options, { corrupt: true });
 
   const report = await writeKaktus(DOCUMENTS, clients, options);
   assert.deepEqual(statuses(report), EXPECTED);
@@ -352,7 +364,7 @@ test("data corrupted by an interrupted batch are restored from its backup", asyn
     [["0001", "RESTORED_FROM_BACKUP"]],
   );
   assert.equal(
-    (await stat(join(options.stateDir, "quarantine", "0001", "crashed", "FAKPRI.DBF"))).size,
+    (await stat(join(options.stateDir, "quarantine", "0001", batchId, "FAKPRI.DBF"))).size,
     0,
     "the corrupted file is kept",
   );
@@ -382,13 +394,86 @@ test("an interrupted batch is recovered even when no document goes to its compan
   assert.deepEqual(await new StateStore(options.stateDir).pendingCompanies(), []);
 });
 
-test("recovery waits while the import of a crashed run may still be writing", async () => {
-  const { options, fakpri } = await kaktusSetup();
+test("recovery does not wait for the batch deadline when the batch's import is not running", async () => {
+  const { options } = await kaktusSetup();
+  // A quick restart, or a clock set back: the deadline has not passed, but nothing imports any more.
   await interruptedBatch(options, { corrupt: true, deadlineInFuture: true });
   const report = await writeKaktus(DOCUMENTS, clients, options);
-  assertAll(report, "0001", "deferred", "RECOVERY_POSTPONED", "may still be importing");
+  assert.deepEqual(
+    report.udalosti.map((event) => event.kod),
+    ["RESTORED_FROM_BACKUP"],
+  );
+  assert.deepEqual(statuses(report), EXPECTED);
+});
+
+test("an import left running by a crashed run is stopped before the data are recovered", async () => {
+  const { options } = await kaktusSetup();
+  const batchId = await interruptedBatch(options, { corrupt: true, deadlineInFuture: true });
+  const files = new StateStore(options.stateDir).batchFiles("0001", batchId);
+  const leftover = spawn(process.execPath, ["-e", "setInterval(() => {}, 1000)", files.batch, files.response], {
+    stdio: "ignore",
+  });
+  try {
+    const report = await writeKaktus(DOCUMENTS, clients, options);
+    assert.equal(isAlive(leftover.pid!), false);
+    assert.deepEqual(
+      report.udalosti.map((event) => event.kod),
+      ["IMPORT_STOPPED", "RESTORED_FROM_BACKUP"],
+    );
+    assert.deepEqual(statuses(report), EXPECTED);
+  } finally {
+    leftover.kill("SIGKILL");
+  }
+});
+
+test("without the process list, recovery waits for the batch deadline", async () => {
+  const { options, fakpri } = await kaktusSetup();
+  await interruptedBatch(options, { corrupt: true, deadlineInFuture: true });
+  const waiting = await withoutProcessList(() => writeKaktus(DOCUMENTS, clients, options));
+  assertAll(waiting, "0001", "deferred", "RECOVERY_POSTPONED", "may still be importing");
+  assert.match(waiting.udalosti[0]?.zprava ?? "", /process list unavailable/);
   assert.equal((await fakpri("0001")).length, 0, "nothing restored yet");
-  assert.equal(written(report, "0002"), 5);
+  assert.equal(written(waiting, "0002"), 5);
+
+  const passed = await kaktusSetup();
+  await interruptedBatch(passed.options, { corrupt: true });
+  const after = await withoutProcessList(() => writeKaktus(DOCUMENTS, clients, passed.options));
+  assert.deepEqual(
+    after.udalosti.map((event) => event.kod),
+    ["RESTORED_FROM_BACKUP"],
+    "once the deadline has passed",
+  );
+});
+
+test("an import outliving a killed connector is stopped by the next run; on Windows it dies with the connector", async () => {
+  const { dir, options } = await kaktusSetup();
+  await writeFile(join(dir, "hang.cjs"), HANG);
+  const args = ["--data", options.dataDir, "--kaktus", join(dir, "hang.cjs"), "--state", options.stateDir];
+  const inputs = ["--clients", CLIENTS_PATH, "--documents", DOCUMENTS_PATH, "--out", join(dir, "killed.json")];
+  const connector = spawn(process.execPath, [CLI, "write", ...args, ...inputs, "--timeout", "600"], {
+    stdio: "ignore",
+  });
+  let importPid = 0;
+  try {
+    importPid = await pidFrom(join(dir, "hang.pid"));
+    connector.kill("SIGKILL");
+    await once(connector, "exit");
+
+    const windows = process.platform === "win32";
+    for (let waited = 0; waited < 2_000 && isAlive(importPid); waited += 50) await sleep(50);
+    assert.equal(isAlive(importPid), !windows, windows ? "a job object ends the import" : "the import outlived it");
+    const report = await writeKaktus(DOCUMENTS, clients, options);
+    assert.equal(isAlive(importPid), false);
+    assert.deepEqual(
+      report.udalosti.map((event) => event.kod),
+      windows ? ["INTERRUPTED_BATCH"] : ["IMPORT_STOPPED", "INTERRUPTED_BATCH"],
+    );
+    assert.deepEqual(statuses(report), EXPECTED);
+    assertWrittenOnce(await taxyRecords(options.dataDir), WRITTEN_IDS);
+  } finally {
+    connector.kill("SIGKILL");
+    if (importPid && isAlive(importPid)) process.kill(importPid, "SIGKILL");
+  }
 });
 
 test("restore is refused when the data changed after the batch; nothing is touched", async () => {
@@ -494,6 +579,12 @@ if (xml.includes('firma="0001"')) setTimeout(() => {}, 60000);
 else process.exit(kaktus(command, batch, response));
 `;
 
+// Never ends, like a Kaktus waiting on a dialog; tells its pid.
+const HANG = `${PRELUDE}
+fs.writeFileSync(path.join(__dirname, "hang.pid"), String(process.pid));
+setInterval(() => {}, 1000);
+`;
+
 // Imports normally; meanwhile another connector run takes over the lock of company 0001.
 const STEAL_LOCK = `${PRELUDE}
 const status = kaktus(command, batch, response);
@@ -513,17 +604,18 @@ process.exit(importChanged(xml.replace(/ *<Poznamka>[^<]*<\\/Poznamka>\\r\\n/g, 
 `;
 
 /**
- * Leaves a journal and backup as if the connector died during an import into company 0001 two minutes ago.
- * `corrupt` empties FAKPRI.DBF during that import (power loss, findings I4).
+ * Leaves a journal and backup as if the connector died during an import into company 0001 two minutes ago;
+ * returns the batch id. `corrupt` empties FAKPRI.DBF during that import (power loss, findings I4).
  */
 async function interruptedBatch(
   options: WriteOptions,
   { corrupt = false, deadlineInFuture = false, companyDir = "" } = {},
-): Promise<void> {
+): Promise<string> {
   const dir = join(options.dataDir, "0001");
   const state = new StateStore(options.stateDir);
+  const batchId = `crashed-${basename(dirname(options.dataDir))}`; // unique, so no other process matches it
   const entry = await state.beginBatch(
-    { batchId: "crashed", company: "0001", documentIds: ["doc_b0e22b273a", "doc_49aa18c650"] },
+    { batchId, company: "0001", documentIds: ["doc_b0e22b273a", "doc_49aa18c650"] },
     dir,
     60_000,
   );
@@ -538,6 +630,17 @@ async function interruptedBatch(
   if (corrupt) await writeFile(join(dir, "FAKPRI.DBF"), "");
   const duringImport = new Date(startedAt + 1_000);
   for (const name of await readdir(dir)) await utimes(join(dir, name), duringImport, duringImport);
+  return batchId;
+}
+
+/** The pid a stub writes to `path`, once it is there. */
+async function pidFrom(path: string): Promise<number> {
+  for (let waited = 0; waited < 30_000; waited += 50) {
+    const text = await readFile(path, "utf8").catch(() => "");
+    if (text) return Number(text);
+    await sleep(50);
+  }
+  throw new Error(`${path} was not written`);
 }
 
 async function stub(dir: string, name: string, source: string): Promise<KaktusProgram> {

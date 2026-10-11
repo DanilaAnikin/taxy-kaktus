@@ -17,7 +17,7 @@ const USAGE = `Usage:
   --kaktus     KAKTUS.EXE or the simulator script (default: kaktus/kaktus.cjs)
   --clients    TAXY clients (default: taxy/klienti.json)
   --documents  TAXY documents to write (default: taxy/doklady-k-zapisu.json)
-  --state      connector state: locks, journal, backups, batches (default: .kaktus-state)
+  --state      connector state: journal, backups, batches (default: .kaktus-state)
   --timeout    import timeout in seconds, 1-600 (default: 60)
 
 Exit codes:

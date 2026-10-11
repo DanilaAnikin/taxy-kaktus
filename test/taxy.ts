@@ -9,7 +9,8 @@ import { DATA_DIR, ROOT } from "./helpers.js";
 
 type Json = Record<string, unknown>;
 
-export const DOCUMENTS: Json[] = JSON.parse(readFileSync(join(ROOT, "taxy", "doklady-k-zapisu.json"), "utf8"));
+export const DOCUMENTS_PATH = join(ROOT, "taxy", "doklady-k-zapisu.json");
+export const DOCUMENTS: Json[] = JSON.parse(readFileSync(DOCUMENTS_PATH, "utf8"));
 export const CLIENTS_PATH = join(ROOT, "taxy", "klienti.json");
 
 /** Outcome of the task data on fresh Kaktus data; every other document is written (docs/findings.md). */

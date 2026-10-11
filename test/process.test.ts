@@ -1,9 +1,10 @@
 import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
 import { mkdtemp, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { basename, join } from "node:path";
 import { test } from "node:test";
-import { kaktusProgram, runImport } from "../src/kaktus/process.js";
+import { kaktusProgram, runImport, runningImports } from "../src/kaktus/process.js";
 
 test("the simulator runs on Node with 'import'; KAKTUS.EXE gets /IMPORT as in the manual", () => {
   assert.deepEqual(kaktusProgram("kaktus/kaktus.cjs"), {
@@ -41,4 +42,20 @@ test("an import run ends when Kaktus exits, even if a helper process keeps its o
   const run = await runImport(kaktusProgram(join(dir, "helper.cjs")), "b.xml", "b.odpoved.xml", 10_000);
   assert.deepEqual([run.exitCode, run.timedOut, run.output], [0, false, "done"]);
   assert.ok(Date.now() - started < 2_000, `took ${Date.now() - started} ms`);
+});
+
+test("a running import is found by the file names of its batch, not by one of them", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "kaktus-process-"));
+  const id = basename(dir); // unique, so no other process on this machine matches
+  const files = { batch: join(dir, `${id}.xml`), response: join(dir, `${id}.odpoved.xml`) };
+  const hang = (...args: string[]) =>
+    spawn(process.execPath, ["-e", "setInterval(() => {}, 1000)", ...args], { stdio: "ignore" });
+  const editor = hang(files.batch);
+  const leftover = hang("import", files.batch, files.response);
+  try {
+    assert.deepEqual(await runningImports(files), [leftover.pid]);
+  } finally {
+    editor.kill();
+    leftover.kill();
+  }
 });

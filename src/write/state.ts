@@ -15,7 +15,10 @@ export interface JournalEntry {
   documentIds: string[];
   /** When the import was started, after the backup. */
   startedAt: string;
-  /** Kaktus cannot be writing for this batch after the deadline (start + import timeout + margin). */
+  /**
+   * The import ends by then (start + import timeout + margin). Recovery waits for it only when it cannot list
+   * processes; a restore needs the data unchanged since.
+   */
   deadline: string;
   backupDir: string;
   /** File name → SHA-256 of the backup copy. */

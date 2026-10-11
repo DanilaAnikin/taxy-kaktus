@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
-import { extname } from "node:path";
+import { basename, extname } from "node:path";
+import { listProcesses } from "../util/processes.js";
 
 /** How to start an import; the batch and response paths are appended to `args`. */
 export interface KaktusProgram {
@@ -27,7 +28,8 @@ const OUTPUT_GRACE_MS = 200;
 
 /**
  * Runs the import of one batch and kills it after the timeout. Resolves when Kaktus exits, for any exit code;
- * rejects only when the program cannot be started.
+ * rejects only when the program cannot be started. On Windows, Node puts the import into a job object that
+ * kills it when the connector exits; elsewhere it can outlive a killed connector (see `runningImports`).
  */
 export function runImport(
   program: KaktusProgram,
@@ -69,4 +71,15 @@ export function runImport(
       });
     });
   });
+}
+
+/**
+ * Imports of this batch still running, found by its file names in their command line; e.g. an import whose
+ * connector was killed. Rejects when the process list cannot be read.
+ */
+export async function runningImports(files: { batch: string; response: string }): Promise<number[]> {
+  const names = [basename(files.batch), basename(files.response)];
+  return (await listProcesses())
+    .filter((info) => info.pid !== process.pid && names.every((name) => info.commandLine.includes(name)))
+    .map((info) => info.pid);
 }

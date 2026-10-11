@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto";
 import { readFile, rm, stat, utimes, writeFile } from "node:fs/promises";
 import { hostname } from "node:os";
 import { join } from "node:path";
+import { isAlive, listProcesses } from "../util/processes.js";
 
 /**
  * Our lock file in the Kaktus company folder. It lives with the data, so every connector writing to these
@@ -16,7 +17,10 @@ export interface CompanyLock {
   release(): Promise<void>;
 }
 
-/** A lock not renewed for this long is abandoned. Runs renew it before each batch, and a batch is bounded by the import timeout. */
+/**
+ * A lock of another computer not renewed for this long is abandoned. Runs renew it before each batch, and a batch
+ * is bounded by the import timeout.
+ */
 const STALE_LOCK_MS = 30 * 60 * 1000;
 /** A lock file is written at once; one still unreadable after this long was left by a crash. */
 const UNREADABLE_LOCK_MS = 10 * 1000;
@@ -52,6 +56,7 @@ export async function lockCompany(companyDir: string): Promise<CompanyLock | nul
 interface LockOwner {
   pid?: unknown;
   host?: unknown;
+  since?: unknown;
   token?: unknown;
 }
 
@@ -67,22 +72,34 @@ async function isOwner(path: string, token: string): Promise<boolean> {
   return (await readOwner(path))?.token === token;
 }
 
-/** Stale: its process is gone, or it has not been renewed for longer than a live run allows. */
+/**
+ * Stale: its owner is gone. On this computer the owner's process decides, so on Windows a clock change cannot
+ * expire a live lock; a lock of another computer is abandoned when it has not been renewed for 30 min.
+ */
 async function isStaleLock(path: string): Promise<boolean> {
   const info = await stat(path).catch(() => null);
   if (info === null) return true;
   const age = Date.now() - info.mtimeMs;
-  if (age > STALE_LOCK_MS) return true;
   const owner = await readOwner(path);
   if (owner === null) return age > UNREADABLE_LOCK_MS;
-  return owner.host === hostname() && typeof owner.pid === "number" && !isAlive(owner.pid);
+  if (owner.host === hostname() && typeof owner.pid === "number") {
+    const running = await ownerRunning(owner.pid, owner.since);
+    if (running !== null) return !running;
+  }
+  return age > STALE_LOCK_MS;
 }
 
-function isAlive(pid: number): boolean {
-  try {
-    process.kill(pid, 0);
-    return true;
-  } catch (error) {
-    return (error as NodeJS.ErrnoException).code === "EPERM";
-  }
+/**
+ * Whether the process that took the lock still runs. A process with its pid that started after the lock was taken
+ * is another one reusing the pid (e.g. after a restart). null: unknown, as without the process list.
+ */
+async function ownerRunning(pid: number, since: unknown): Promise<boolean | null> {
+  if (!isAlive(pid)) return false;
+  const lockedAt = typeof since === "string" ? Date.parse(since) : Number.NaN;
+  const processes = await listProcesses().catch(() => null);
+  if (processes === null || Number.isNaN(lockedAt)) return null;
+  const owner = processes.find((candidate) => candidate.pid === pid);
+  if (!owner) return false;
+  // Listed start times are never late; the margin keeps a live owner from looking started after its lock.
+  return owner.startedAt === null ? null : owner.startedAt <= lockedAt + 1000;
 }

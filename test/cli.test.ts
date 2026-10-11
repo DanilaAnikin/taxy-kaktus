@@ -3,11 +3,8 @@ import { execFileSync, spawnSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { test } from "node:test";
-import { kaktusSetup, ROOT } from "./helpers.js";
-import { CLIENTS_PATH } from "./taxy.js";
-
-const CLI = join(ROOT, "dist", "src", "cli.js");
-const DOCUMENTS_PATH = join(ROOT, "taxy", "doklady-k-zapisu.json");
+import { CLI, kaktusSetup } from "./helpers.js";
+import { CLIENTS_PATH, DOCUMENTS_PATH } from "./taxy.js";
 
 function cli(...args: string[]) {
   const { status, stdout, stderr } = spawnSync(process.execPath, [CLI, ...args], { encoding: "utf8" });
