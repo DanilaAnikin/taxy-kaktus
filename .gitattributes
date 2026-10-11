@@ -1,0 +1,2 @@
+# Check out every file byte for byte on every OS: Kaktus data are binary, and Prettier expects LF.
+* -text

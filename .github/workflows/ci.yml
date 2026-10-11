@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: ${{ matrix.os }}, Node ${{ matrix.node }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        node: [18, 24]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - name: Task inputs unchanged
+        shell: bash
+        run: |
+          changes=$(git status --porcelain --untracked-files=all --ignored -- kaktus taxy ZADANI.md)
+          echo "$changes"
+          test -z "$changes"
+
+  # More rounds of test/chaos.test.ts (imports killed at random moments) on Windows; prints what happened.
+  chaos:
+    name: random kills, windows-latest
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: npm ci
+      - run: npm run build
+      - run: node --test dist/test/chaos.test.js
+        env:
+          CHAOS_ROUNDS: 30
