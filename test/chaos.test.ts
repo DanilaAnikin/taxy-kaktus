@@ -35,6 +35,7 @@ test("imports killed at random moments never duplicate or lose a document", asyn
       report.doklady.forEach((document) => document.varovani.forEach((warning) => count(warning.kod)));
       for (const document of report.doklady) {
         if (document.stav === "needs_review") assert.equal(document.kod, "DELETED_IN_KAKTUS", document.zprava ?? "");
+        if (document.stav === "error" || document.stav === "deferred") count(`${document.stav} ${document.kod}`);
       }
       for (const [id, numbers] of await taxyRecords(options.dataDir)) {
         assert.equal(numbers.length, 1, `round ${round}, run ${run}: ${id} written as ${numbers.join(", ")}`);

@@ -189,7 +189,7 @@ test("a document Kaktus always fails on is isolated; the others are written", as
   const { dir, options } = await kaktusSetup();
   const report = await writeKaktus(DOCUMENTS, clients, {
     ...options,
-    program: await stub(dir, "poison.cjs", POISON),
+    program: await stub(dir, "poison.cjs", poisonOn("<CisloDodavatele>8120045566<")),
   });
   assert.deepEqual(statuses(report), { ...EXPECTED, doc_70e0c21753: "error KAKTUS_IMPORT_FAILED" });
   assert.match(documentsById(report).get("doc_70e0c21753")?.zprava ?? "", /failed on this document alone/);
@@ -197,6 +197,31 @@ test("a document Kaktus always fails on is isolated; the others are written", as
     await taxyRecords(options.dataDir),
     WRITTEN_IDS.filter((id) => id !== "doc_70e0c21753"),
   );
+});
+
+test("a copy of an invoice waits while the first copy is unsettled, so a crash never changes which is written", async () => {
+  const { dir, options } = await kaktusSetup();
+  // doc_a88ae33500 is a forwarded copy ("Fwd: faktura 260914") of doc_3c0d1615f6 ("Panty a úchytky").
+  const failing = await writeKaktus(DOCUMENTS, clients, {
+    ...options,
+    program: await stub(dir, "poison.cjs", poisonOn("<Text>Panty a ")),
+  });
+  assert.deepEqual(statuses(failing), {
+    ...EXPECTED,
+    doc_3c0d1615f6: "error KAKTUS_IMPORT_FAILED",
+    doc_a88ae33500: "deferred SAME_INVOICE_PENDING",
+  });
+  assert.match(documentsById(failing).get("doc_a88ae33500")?.zprava ?? "", /same invoice as doc_3c0d1615f6/);
+  assertWrittenOnce(
+    await taxyRecords(options.dataDir),
+    WRITTEN_IDS.filter((id) => id !== "doc_3c0d1615f6"),
+  );
+
+  const next = documentsById(await writeKaktus(DOCUMENTS, clients, options));
+  assert.equal(next.get("doc_3c0d1615f6")?.stav, "written");
+  assert.equal(next.get("doc_a88ae33500")?.stav, "already_exists");
+  assert.equal(next.get("doc_a88ae33500")?.kaktusDoklad, next.get("doc_3c0d1615f6")?.kaktusDoklad);
+  assertWrittenOnce(await taxyRecords(options.dataDir), WRITTEN_IDS);
 });
 
 test("data corrupted by the import are restored and the batch is retried in the same run", async () => {
@@ -548,9 +573,9 @@ importChanged(withDocuments(1, 4), batch + ".partial.odpoved.xml");
 process.exit(1);
 `;
 
-// Crashes on the document 8120045566 every time, after writing the documents before it.
-const POISON = `${PRELUDE}
-const poison = documents.findIndex((document) => document.includes("<CisloDodavatele>8120045566<"));
+// Crashes every time on the document whose batch XML contains `marker`, after writing the documents before it.
+const poisonOn = (marker: string) => `${PRELUDE}
+const poison = documents.findIndex((document) => document.includes(${JSON.stringify(marker)}));
 if (poison < 0) process.exit(kaktus(command, batch, response));
 if (poison > 1) importChanged(withDocuments(1, poison), batch + ".partial.odpoved.xml");
 process.exit(1);

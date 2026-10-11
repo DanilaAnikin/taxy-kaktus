@@ -36,6 +36,8 @@ export interface WriteOptions {
  */
 const MAX_FAILED_IMPORTS = 3;
 const IMPORT_LOG_TAIL = 64 * 1024;
+/** Outcomes after which a document still has to get into Kaktus or be decided by a human. */
+const UNSETTLED = new Set<Status>(["error", "deferred", "needs_review"]);
 
 /** Writes TAXY documents to Kaktus and reports a final status for each of them, in input order. */
 export async function writeKaktus(
@@ -182,7 +184,10 @@ class CompanyRun {
     }
   }
 
-  /** Resolves documents already in the book; picks the next batch, never two copies of the same invoice. */
+  /**
+   * Resolves documents already in the book; picks the next batch, never two copies of the same invoice. A copy
+   * waits while an earlier one is unsettled, so a crash never changes which copy is written.
+   */
   private selectBatch(queue: readonly WritePlan[], book: Book): { batch: Batch; waiting: WritePlan[] } {
     const size = this.failedImports > 0 ? 1 : MAX_BATCH_SIZE;
     const items: Prepared[] = [];
@@ -195,6 +200,12 @@ class CompanyRun {
         continue;
       }
       const planKeys = naturalKeys(plan.invoice);
+      const earlier = this.unsettledCopy(planKeys);
+      if (earlier) {
+        const zprava = `same invoice as ${earlier.id}, which ended this run as ${earlier.stav}; this copy waits for it`;
+        this.finish(plan, { status: "deferred", kod: "SAME_INVOICE_PENDING", zprava }, null, plan.warnings);
+        continue;
+      }
       if (items.length === size || planKeys.some((key) => keys.has(key))) {
         waiting.push(plan);
         continue;
@@ -204,6 +215,15 @@ class CompanyRun {
       items.push({ ...linked, plan, warnings: [...plan.warnings, ...linked.warnings] });
     }
     return { batch: { items, knownPartnerIds: new Set(book.partners.map((partner) => partner.id)) }, waiting };
+  }
+
+  /** A document of this run with one of these natural keys (same invoice) that ended unsettled. */
+  private unsettledCopy(keys: readonly string[]): DocumentResult | null {
+    for (const plan of this.plans) {
+      const done = this.results.get(plan.ref.id);
+      if (done && UNSETTLED.has(done.stav) && naturalKeys(plan.invoice).some((key) => keys.includes(key))) return done;
+    }
+    return null;
   }
 
   private resolveFromBook(plan: WritePlan, match: Exclude<BookMatch, { kind: "none" }>): void {
