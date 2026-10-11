@@ -105,8 +105,9 @@ src/write/match.ts  matching against the book, supplier linking, write verificat
 src/write/lock.ts   company lock file in the Kaktus company folder
 src/write/state.ts  journal, backups, restore
 src/write/write.ts  write orchestration per company
-src/util/           fixed-point money, atomic and durable file writes
+src/util/           fixed-point money, atomic and durable file writes, process list
 test/               unit tests; write, chaos, cli and output tests run the simulator on a temp copy
+.github/workflows/  CI: Windows and Linux, Node 18 and 24; a longer random-kill run on Windows
 ```
 
 ## Deliverable limits

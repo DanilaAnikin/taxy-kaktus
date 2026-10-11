@@ -76,16 +76,16 @@ Company 0001 has 30 documents, more than one batch holds (I3).
 **Open period.** Not pre-checked. E220 is reported as `rejected` with reason "period closed".
 *Why:* the period lives inside Kaktus (I15); re-implementing a rule we cannot read would drift from it.
 
-**Recovery after an interrupted import.** Before each batch the whole company folder is backed up and the batch is recorded in a journal bound to that folder; both are flushed to disk before the import starts. Every write run first recovers each company with an unfinished batch, also when no document goes to it. Intact data: the batch is reconciled by TAXY id. Corrupted data: restored automatically only when all of these hold:
-1. the journal has an unfinished batch for that company, and its deadline (start + import timeout + 5 s) has passed, so its import cannot be writing any more,
+**Recovery after an interrupted import.** Before each batch the whole company folder is backed up and the batch is recorded in a journal bound to that folder; both are flushed to disk before the import starts. Every write run first recovers each company with an unfinished batch, also when no document goes to it. An import of that batch still running (its connector was killed) is found by the batch file names in the process list and stopped first. Intact data: the batch is reconciled by TAXY id. Corrupted data: restored automatically only when all of these hold:
+1. the journal has an unfinished batch for that company, and no import of it runs any more,
 2. a company DBF fails the integrity check or is missing,
 3. the journal's backup passes the integrity check and its checksum,
-4. no company file changed after the deadline, and files the import never writes are unchanged,
+4. no company file changed after the batch deadline (start + import timeout + 5 s), and files the import never writes are unchanged,
 5. the company is not open (`FIRMA.LCK`).
 
-Corrupted files are kept in quarantine; restore is temp file + rename; the batch is then reconciled and re-queued. Before the deadline or while the company is open, recovery waits (`deferred`); otherwise the company is halted with `error` and the backup path.
-*Why:* unattended operation needs self-healing, but the restore must never erase an accountant's work or hide corruption we did not cause. The conditions prove the damage is ours and nothing happened since. A random-kill test (200 rounds, 713 runs, 50 corruptions restored) found no duplicate or lost document.
-*Limit:* condition 1 assumes the import dies with the connector; if the connector is killed and the import hangs past the deadline, it is not detected. In production, run imports in a Windows job object closed with the connector; it also ends helper processes of a killed import. The deadline checks rely on the computer clock.
+Corrupted files are kept in quarantine; restore is temp file + rename; the batch is then reconciled and re-queued. While the company is open or the import cannot be stopped, recovery waits (`deferred`); otherwise the company is halted with `error` and the backup path.
+*Why:* unattended operation needs self-healing, but the restore must never erase an accountant's work or hide corruption we did not cause. The conditions prove the damage is ours and nothing happened since. Looking at the processes instead of waiting for the deadline keeps recovery independent of the clock, e.g. after a power loss that resets it. On Windows the import cannot outlive the connector at all: Node assigns child processes to a job object that kills them when the parent exits (libuv). A random-kill test (200 rounds, 713 runs, 50 corruptions restored) found no duplicate or lost document.
+*Limit:* without a process list (no PowerShell or `ps`), recovery waits for the deadline instead, which relies on the clock; so does condition 4.
 
 **Output schemas.** `read` reuses the TAXY document schema (Czech keys as in `taxy/doklady-k-zapisu.json`) plus a `kaktus` block (FP number, ids, paid date, note). The `write` report uses the same style: per document `stav`, `kaktusDoklad`, `kod` (reason), `zprava`, `varovani`.
 *Why:* invoices read from Kaktus are directly comparable with documents TAXY sends for writing.
@@ -108,5 +108,5 @@ Corrupted files are kept in quarantine; restore is temp file + rename; the batch
 **VAT without DIČ.** Written with warning `SUPPLIER_WITHOUT_DIC` when neither TAXY nor Kaktus has the supplier's DIČ.
 *Why:* the DIČ may just be missing in the data. Checking VAT registration (ARES, VAT payer registry) needs the network and belongs on the TAXY server before approval.
 
-**Batches.** At most 20 documents per batch; companies one after another; one connector run per company: lock file `TAXY-CONNECTOR.LOCK` in the company folder, renewed before each batch, taken over only when its process is dead or it was not renewed for 30 min. Import timeout at most 10 min.
-*Why:* I3, I5. The lock lives with the data (I18), so connectors with separate state or on another PC with shared data exclude each other too.
+**Batches.** At most 20 documents per batch; companies one after another; one connector run per company: lock file `TAXY-CONNECTOR.LOCK` in the company folder, renewed before each batch. It is taken over only when its owner is gone: on the same computer when the owner process no longer runs (a process reusing its pid started after the lock was taken); from another computer, or without a process list, when it was not renewed for 30 min. Import timeout at most 10 min.
+*Why:* I3, I5. The lock lives with the data (I18), so connectors with separate state or on another PC with shared data exclude each other too. On one Windows computer no clock change or sleep can hand a live run's company to another run: Windows keeps a process's creation time, while Linux derives it from the boot time, which moves when the clock is set.
